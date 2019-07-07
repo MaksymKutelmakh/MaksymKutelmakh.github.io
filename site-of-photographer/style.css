@@ -274,7 +274,7 @@ h2{
   }
 
   hr {
-    width: 150px;
+    width: 133px;
   }
   .slider__item{
     padding-left: 25px;
@@ -327,6 +327,10 @@ h2{
 
   .galary{
     height: 100%;
+  }
+
+  .title-cont{
+    margin-left: 16px;
   }
 
   .title {
