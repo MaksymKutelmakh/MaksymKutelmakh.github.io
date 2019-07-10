@@ -1,0 +1,348 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#lf-block {
+    display: flex;
+    flex-direction: column;
+    background: #2b343b;
+    height: 908px;
+}
+
+#logo {
+    height: 89px;
+    width: 417px;
+    background: #1e252b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+#logo img {
+    padding-right: 10px;
+    padding-bottom: 17px;
+    margin-left: 150px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu ul li {
+    display: flex;
+    margin-top: 30px;
+    justify-content: flex-start;
+    margin-left: 99px;
+    align-items: center;
+    font-size: 12px;
+    height: 62px;
+    width: 218px;
+    padding-left: 60px;
+}
+
+#menu li,
+#social-network li,
+#payment li {
+    list-style: none;
+}
+
+#social-network {
+    margin-top: 220px;
+}
+
+#social-network ul,
+#payment ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+#social-network ul li {
+    margin-right: 17px;
+}
+
+#rh-block {
+    background: #242c32;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    height: 85px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#power {
+    padding-left: 35px;
+    font-size: 23px;
+}
+
+#user {
+    display: flex;
+    text-transform: lowercase;
+}
+
+#user-email {
+    margin-right: 20px;
+    height: 32px;
+    width: 216px;
+    background: #2b343b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2b343b;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#exit {
+    margin-right: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #808080;
+}
+
+#antminer {
+    width: 822px;
+    height: 662px;
+    background: #2b343b;
+    margin-left: 35px;
+    margin-top: 3px;
+}
+
+#head-of-antminer {
+    padding-top: 25px;
+    padding-left: 27px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.table {
+    border: 1px solid #202930;
+    margin-left: 27px;
+    margin-right: 27px;
+    /* margin-top: 18px; */
+}
+
+#available-of-rockhash {
+    display: flex;
+    margin-left: 20px;
+    letter-spacing: 1.5px;
+}
+
+.info {
+    padding-top: 3px;
+    margin-left: 15px;
+}
+
+.height-of-total {
+    height: 55px;
+}
+
+#total {
+    width: 315px;
+    color: #19b450;
+    border-left: 1px solid #202930;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.difference {
+    height: 48px;
+    display: flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 9px;
+}
+
+.difference img {
+    padding-right: 7px;
+}
+
+#calculator {
+    height: 343px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #74787a;
+    margin-top: 20px;
+}
+
+#payment ul {
+    margin-top: 20px;
+}
+
+#payment ul li {
+    margin-right: 25px;
+}
+
+#mining {
+    color: #74787a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 190px;
+    margin-top: 30px;
+}
+
+#continue {
+    width: 252px;
+    height: 48px;
+    border: 1px solid #f04a49;
+    background: #f04a49;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#continue a {
+    text-decoration: none;
+    color: white;
+}
+
+#lf-total,
+#rh-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 240px;
+}
+
+#lf-total span {
+    padding-right: 320px;
+    padding-bottom: 10px;
+    padding-top: 65px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+
+#rh-total span {
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-top: 65px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+
+#lf-total input {
+    margin-right: 160px;
+    letter-spacing: 2px;
+}
+
+#rh-total input {
+    margin-left: 160px;
+}
+
+#equals {
+    font-size: 60px;
+    margin-top: 90px;
+}
+
+.container-1 {
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: 110px;
+    left: 120px;
+    color: #808080;
+    font-size: 23px;
+}
+
+.lf-lable {
+    left: 300px;
+}
+
+.container-1 input.input {
+    width: 246px;
+    height: 54px;
+    background: #36434c;
+    border: 2px solid #202930;
+    font-size: 20pt;
+    float: left;
+    color: white;
+    padding-left: 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 665px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    /* position: absolute; */
+    opacity: 0.7;
+    margin-top: 80px;
+    /* left: 0; */
+    /* right: 249px; */
+    /* top: 410px; */
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.active {
+    background: #283137;
+    border-left: 4px solid #f1384b;
+}
+
+.active a {
+    color: #f1384b !important;
+}

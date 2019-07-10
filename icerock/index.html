@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="lf-block">
+        <div id="logo">
+            <img src="./img/Path.png" alt="logo"> ICE ROCK
+        </div>
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="#">Диспетчерская</a>
+                </li>
+                <li class="active">
+                    <a href="#">Купить мощность</a>
+                </li>
+                <li>
+                    <a href="#">Партнерская программа</a>
+                </li>
+                <li>
+                    <a href="#">История</a>
+                </li>
+                <li>
+                    <a href="#">Настройка</a>
+                </li>
+                <li>
+                    <a href="#">Поддержка</a>
+                </li>
+            </ul>
+        </div>
+        <div id="social-network">
+            <ul>
+                <li>
+                    <a href="#"><img src="./img/facebook_icon.png" alt="facebook"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/twitter_icon.png" alt="twitter"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/instagram_icon.png" alt="instagram"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/telegram_icon.png" alt="telegram"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/language.png" alt="language"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="rh-block">
+        <div class="container">
+            <div id="power">
+                Купить мощность
+            </div>
+            <div id="user">
+                <div id="user-email">
+                    berkindulat@gmail.com
+                </div>
+                <div id="exit">
+                    выход
+                </div>
+            </div>
+        </div>
+        <div id="antminer">
+            <div id="head-of-antminer">
+                ANTMINER
+            </div>
+            <div class="container table height-of-total">
+                <div id="available-of-rockhash">
+                    ДОСТУПНО RockHash к продаже
+                    <div class="info">
+                        <img src="./img/Shape.png" alt="info">
+                    </div>
+                </div>
+                <div id="total">
+                    14329053 (RH)
+                </div>
+            </div>
+            <div class="table difference">
+                <img src="./img/Oval Copy 3.png" alt=""> 1 RH = 1 Gh/s
+                <div class="info">
+                    <img src="./img/Shape.png" alt="info">
+                </div>
+            </div>
+            <div class="table" id="calculator">
+                <div class="container">
+                    <div id="lf-total" class="container-1">
+                        <span>Мощность</span>
+                        <input type="text" name="power" id="power-input" class="input">
+                        <label for="" class="measure">RH</label>
+                    </div>
+                    <div id="equals">
+                        =
+                    </div>
+                    <div id="rh-total" class="container-1">
+                        <span>стоимость</span>
+                        <input type="text" name="sum" class="input" id="sum-input">
+                        <label for="" class="measure lf-lable">$</label>
+                    </div>
+                </div>
+
+                <div class="" "slidecontainer">
+                    <input type="range" min="0" max="9999" value="0" class="slider" id="myRange">
+
+                </div>
+                <div id="continue">
+                    <a href="#">Продолжить</a>
+                </div>
+            </div>
+            <div id="payment">
+                мы принимаем к оплате
+                <ul>
+                    <li> <img src="./img/Shape4.png" alt=""></li>
+                    <li> <img src="./img/Path6.png" alt=""></li>
+                    <li> <img src="./img/litecoin-seeklogo.png" alt=""></li>
+                    <li> <img src="./img/Shape2.png" alt=""></li>
+                    <li> <img src="./img/Shape3.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div id="mining">
+            © 2019 Ice Rock mining
+        </div>
+    </section>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("power-input");
+        var outputInSum = document.getElementById("sum-input");
+
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            output.value = this.value;
+            outputInSum.value = (this.value / 3.3) ^ 2;
+        }
+    </script>
+</body>
+
+</html>
