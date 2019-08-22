@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Bookzone</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logos">
+            <div class="logo">
+                <a href="#"><img src="./img/logo.png" alt="logo"></a>
+                <span>
+                    <span class="c-org">НАЙДЕМ</span> ТЕБЕ<br> НУЖНУЮ <span class="c-org">КНИГУ</span>
+                </span>
+            </div>
+            <hr>
+            <div class="logo-of-our-friend">
+                <a href="#"><img class="first-img" src="./img/logo-of-bookzone.png" alt="bookzone"></a>
+                <a href="#"><img src="./img/logo-OF-reader.png" alt="reader"></a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="addPopUp_forAbout()" id="service">О СЕРВИСЕ</a></li>
+                <li><a href="#" onclick="addPopUp_forSupport()" id="support">ПОДДЕРЖКА</a></li>
+                <li><a href="#" onclick="addPopUp_forDelivery()" id="delivery">ДОСТАВКА И ОПЛАТА</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="b-popup" id="b-popup">
+            <div class="b-popup-content">
+                <span class="close" onclick="closePopUp_forAbout()"><a href="#"><img src="./img/+ (2).png" alt=""></a></span>
+                <span class="c-org" id="title-of-pop-up">
+                    О СЕРВИСЕ
+                </span>
+                <div class="bb">
+                <div class="p-block">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ex ipsa corrupti magni, necessitatibus iusto, quidem sunt repellat molestiae possimus consequatur cum itaque culpa! Exercitationem dolorum alias omnis fugit iste!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia ex numquam obcaecati optio doloribus id cum aspernatur amet eligendi odit accusamus porro aliquam provident suscipit nostrum, magnam laboriosam? Modi, iure?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laborum animi vero quisquam harum laboriosam ea excepturi rem soluta nesciunt </p>
+                </div>
+                <div class="pop-up-offer">
+                    <span>Нужные книги гайдете у нас</span>
+                    <labeL class="c-org">Заказывайте только у нас "Название компании"</labeL>
+                </div>
+                <div class="articles">
+                    <a class="archives" href="#"></a>
+                    <div class="newss">Lorem adipisicing elit. Voluptate aperiam blanditiis maxime dolore atque?</div>
+                    <div class="newss">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laborum ducimus natus mollitia iusto ratione! Molestias numquam magnam et pariatur, aut, esse debitis fugiat similique vel nihil qui laboriosam nesciunt!</div>
+                </div>
+                <div class="articless">
+                    <a class="archivess" href="#"></a>
+                    <div class="newsss">Lorem adipisicing elit. Voluptate aperiam blanditiis maxime dolore atque?</div>
+                    <div class="newsss">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laborum ducimus natus mollitia iusto ratione! Molestias numquam magnam et pariatur, aut, esse debitis fugiat similique vel nihil qui laboriosam nesciunt!</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    <div class="b-popup2" id="b-popup">
+            <div class="b-popup-content">
+                <span class="close" onclick="closePopUp_forDelivery()"><a href="#"><img src="./img/+ (2).png" alt=""></a></span>
+                <span class="c-org" id="title-of-pop-up">
+                    ДОСТАВКА И ОПЛАТА
+                </span>
+                <div class="p-block">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ex ipsa corrupti magni, necessitatibus iusto, quidem sunt repellat molestiae possimus consequatur cum itaque culpa! Exercitationem dolorum alias omnis fugit iste!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia ex numquam obcaecati optio doloribus id cum aspernatur amet eligendi odit accusamus porro aliquam provident suscipit nostrum, magnam laboriosam? Modi, iure?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laborum animi vero quisquam harum laboriosam ea excepturi rem soluta nesciunt </p>
+                </div>
+            </div>
+        </div>
+    <div class="b-popup3" id="b-popup">
+            <div class="b-popup-content">
+                <span class="close" onclick="closePopUp_forSupport()"><a href="#"><img src="./img/+ (2).png" alt=""></a></span>
+                <span class="c-org" id="title-of-pop-up">
+                    ПОДДЕРЖКА
+                </span>
+                 <form class="lf-form">
+                     <ul class="padding-left">
+                        <li>
+                            <label>Введите ваше имя</label>    
+                            <input type="text" required>  
+                        </li>
+                        <li>
+                            <label>Введите ваш телефон</label>
+                            <input type="text" required>  
+                        </li>
+                        <li>
+                            <label>Введите ваш e-mail*</label>
+                            <input type="text" >  
+                        </li>
+                        <li>
+                            <label>Введите текст</label>
+                            <textarea name="text" id="" cols="30" rows="10"></textarea>  
+                        </li>
+                    </ul>
+                    <div class="rulse-for-support some-change-to-width">
+                        <span onclick="checkRulse_forSupport()">
+                            <input type="checkbox" name="rulse" id="rulses">
+                            <label for="rulses"></label> 
+                        </span>
+                        <div class="text-of-rulse some-change-to-display">
+                            <span>
+                                Вы соглашаетесь с условиями обработки персональных данных <a href="#" class="c-org">(Ознакомится)</a>
+                            </span>
+                            <span class="dont-care">
+                                <span class="c-org">*</span> 
+                                Не об'язательно
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="order send" id="send">
+                        Отправить
+                    </a>
+                                      
+                </form>
+            </div>
+        </div>
+    <section class="main" id="main">
+        <div class="lest-offer" id="lest-offer">
+            <img src="./img/left-offer.png" alt="left-offer" width="320px" height="220px">
+        </div>
+        <div class="serch" id="search">
+            <h2 id="title-of-search">
+                <span class="left c-org">НАЙДЕМ</span> ТЕБЕ <br> НУЖНУЮ <span class="c-org">КНИГУ</span>
+            </h2>
+            <div class="d1">
+                <form>
+                    <input type="text" id="gorod" oninput="down(this)" placeholder="Введите название книги">
+                    <button type="submit">ПОИСК</button>
+                </form>
+                <div id="podskazka" onclick="copy(event)"></div>
+            </div>
+        </div>
+        <div class="book" id="book">
+            <div class="title-of-book">
+                <span>Маленький иследователь</span>
+                <hr>
+            </div>
+            <div class="info-about-book flex">
+                <div class="left-block">
+                    <ul class="padding-none">
+                        <li>
+                            <img src="./img/user_circle_1048392.png" alt="writer" width="20px" height="20px">  <b>Автор</b>: Джек Лондон
+                        </li>
+                        <li>
+                            <img src="./img/icons8-book-50.png" alt="book" width="20px" height="20px">  <b>Издательство</b>: Махаон
+                        </li>
+                        <li>
+                            <img src="./img/icons8-book-50.png" alt="article" width="20px" height="20px">  <b>Артикул</b>: 73035
+                        </li>
+                        <li>
+                            <img src="./img/bar-code.png" alt="bar-code" width="20px" height="20px">  <b>ISBN</b>: 978-5-389-13989-3
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-block">
+                    <ul class="padding-left">
+                        <li>
+                            <img src="./img/icons8-open-book-50.png" alt="title" width="20px" height="20px">  <b>Переплет</b>: Твердый
+                        </li>
+                        <li>
+                            <img src="./img/calendar.png" alt="age-of-relise" width="20px" height="20px">  <b>Год издание</b>: 2019 г.
+                        </li>
+                        <li>
+                            <img src="./img/cross-variant-with-arrow-edges.png" alt="size" width="20px" height="20px">  <b>Формат</b>: 84х108/32
+                        </li>
+                        <li>
+                            <img src="./img/internet.png" alt="language" width="20px" height="20px">  <b>Язык</b>: Русский
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="article">
+                <div class="container">
+                    <div class="news">Lorem adipisicing elit. Voluptate aperiam blanditiis maxime dolore atque?</div>
+                    <div class="news">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laborum ducimus natus mollitia iusto ratione! Molestias numquam magnam et pariatur, aut, esse debitis fugiat similique vel nihil qui laboriosam nesciunt!</div>
+                </div>
+                <a class="archive" href="#"></a>
+            </div>
+            <div class="delivery">
+                <ul class="padding-none">
+                    <li>
+                        <img src="./img/delivery-icon.png" alt="delivery" width="40px" height="40px"> <b>Наличие</b>: Под заказ
+                    </li>
+                </ul>
+            </div>
+
+            <div class="buttons">
+                <a href="#" class="add" onclick="addBookToCard()">Добавить</a>
+                <a href="#" class="book-book" id="book-book" onclick="moveOnFormBook()">
+                    Заказать
+                    <span class="circle-with-count" id="circle-with-count">
+                        0
+                    </span>
+                </a>
+            </div>
+            <div class="img-and-price-of-book">
+                <img src="./img/12519173_images_12844753020.jpg" alt="book">
+                <div class="price">
+                    <div class="sale" id="sale">
+                        -25%
+                    </div>
+                    <div class="item-price">
+                        <div class="book-price" id="book-price">
+                            305грн
+                        </div>
+                        <div class="sale-price">
+                            225грн
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form" id="form">
+            <div class="title-of-form">
+                <span>Оформление заказа</span>
+                <hr>
+            </div>
+            <div class="main-form">
+                <form class="lf-form">
+                    <span class="span">
+                        Введите персональные данные
+                    </span>
+                     <ul class="padding-left" onclick="hidens()">
+                        <li>
+                            <img src="./img/png.png" id="png" class="png" alt="">
+                            <img src="./img/icons8-open-book-50.png" alt="title" width="20px" height="20px">
+                            <input type="text" placeholder="Введите ваше имя*" required>  
+                        </li>
+                        <li>
+                            <img src="./img/calendar.png" alt="age-of-relise" width="20px" height="20px">
+                            <input type="text" placeholder="Введите ваш телефон*" required>  
+                        </li>
+                        <li>
+                            <img src="./img/cross-variant-with-arrow-edges.png" alt="size" width="20px" height="20px">
+                            <input type="text" placeholder="Введите ваш e-mail*" required>  
+                        </li>
+                        <li>
+                            <img src="./img/internet.png" alt="language" width="20px" height="20px">
+                            <input type="text" placeholder="Введите ваш город*" required>  
+                        </li>
+                        <li class="delivery-in-form">
+                            <img src="./img/icons8-open-book-50.png" alt="title" width="20px" height="20px">
+                            Доставка*:
+                            <div class="get">
+                                <span>
+                                    <input type="radio" name="delivery" id="del1">
+                                    <label for="del1">В отделение</label>
+                                </span>
+                                <span>
+                                    <input type="radio" name="delivery" id="del2">
+                                    <label for="del2">По адресу</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/calendar.png" alt="age-of-relise" width="20px" height="20px">
+                            <input type="text" placeholder="Введите адрес доставки*" required>  
+                        </li>
+                        <li>
+                            <img src="./img/cross-variant-with-arrow-edges.png" alt="size" width="20px" height="20px">
+                            <input type="text" placeholder="Коментарий" required>  
+                        </li>
+                    </ul>
+                    <div class="rulse">
+                        <span onclick="checkRulse()">
+                            <input type="checkbox" name="rulse" id="rulse">
+                            <label for="rulse"></label> 
+                        </span>
+                        <div class="text-of-rulse">
+                            Вы соглашаетесь с условиями обработки персональных данных <a href="#">(Ознакомится)</a>
+                        </div>
+                    </div>
+                    <a href="#" class="order" id="order">
+                        Оформить заказ
+                    </a>
+                                      
+                </form>
+                <form class="rh-form">
+                    <span>
+                        Введите персональные данные
+                    </span>
+                    <div class="cont">
+                        <div class="container-for-pagin">
+                          <div class="single-item">
+                              <span>
+                                  Проверти все ли правильно
+                              </span>
+                               <ul class="padding-left">
+                                    <li>
+                                        <img src="./img/icons8-open-book-50.png" alt="title" width="20px" height="20px">  <b>Переплет</b>: Твердый
+                                    </li>
+                                    <li>
+                                        <img src="./img/calendar.png" alt="age-of-relise" width="20px" height="20px">  <b>Год издание</b>: 2019 г.
+                                    </li>
+                                    <li>
+                                        <img src="./img/cross-variant-with-arrow-edges.png" alt="size" width="20px" height="20px">  <b>Формат</b>: 84х108/32
+                                    </li>
+                                    <li>
+                                        <b>Цена за одну штуку</b>: <label class="c-org"> 255грн </label>
+                                    </li>
+                                </ul>
+                          </div>
+                          <div class="single-item">
+                              <span>
+                                  Проверти все ли правильно
+                              </span>
+                               <ul class="padding-left">
+                                    <li>
+                                        <img src="./img/icons8-open-book-50.png" alt="title" width="20px" height="20px">  <b>Переплет</b>: Твердый
+                                    </li>
+                                    <li>
+                                        <img src="./img/calendar.png" alt="age-of-relise" width="20px" height="20px">  <b>Год издание</b>: 2019 г.
+                                    </li>
+                                    <li>
+                                        <img src="./img/cross-variant-with-arrow-edges.png" alt="size" width="20px" height="20px">  <b>Формат</b>: 84х108/32
+                                    </li>
+                                    <li>
+                                        <b>Цена за одну штуку</b>: <label class="c-org"> 255грн </label>
+                                    </li>
+                                </ul>
+                          </div>
+                          <div class="single-item">
+                              <span>
+                                  Проверти все ли правильно
+                              </span>
+                               <ul>
+                                    <li>
+                                        <img src="./img/icons8-open-book-50.png" alt="title" width="20px" height="20px">  <b>Переплет</b>: Твердый
+                                    </li>
+                                    <li>
+                                        <img src="./img/calendar.png" alt="age-of-relise" width="20px" height="20px">  <b>Год издание</b>: 2016 г.
+                                    </li>
+                                    <li>
+                                        <img src="./img/cross-variant-with-arrow-edges.png" alt="size" width="20px" height="20px">  <b>Формат</b>: 84х108/32
+                                    </li>
+                                    <li>
+                                        <b>Цена за одну штуку</b>: <label class="c-org"> 255грн </label>
+                                    </li>
+                                </ul>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    <div class="sum">
+                        Всего: 750грн
+                        <hr>
+                    </div>
+                    <a href="#" class="active-button order">
+                        Подтвердить
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="right-offer" id="right-offer">
+            <img src="./img/right offer.png" alt="right-offer" width="320px" height="220px">
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
