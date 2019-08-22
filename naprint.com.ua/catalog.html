@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/catalog.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="nav d-flex">
+            <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul class="menu">
+                    <div class="menu-of-constructor">
+                        <li id="title-menu">Конструктор</li>
+                        <a href="#"><li>Акции</li></a>
+                        <a href="#"><li>Оплата/Доставка</li></a>
+                        <a href="#"><li>Помощь</li></a>
+                        <a href="#"><li>О нас</li></a>
+                        <a href="#"><li>Контакты</li></a>
+                    </div>
+                    <div class="menu-of-catalog">
+                        <li id="title-menu-catalog">Каталог:</li>
+                        <a href="#"><li>Футболки</li></a>
+                        <a href="#"><li>Ковты</li></a>
+                        <a href="#"><li>Свитшоты</li></a>
+                        <a href="#"><li>Хуги</li></a>
+                    </div>
+                  </ul>  
+                </div>
+              </nav>
+
+              <div class="nav-destination-of-company">
+                Украина, 36008, г. Полтава,<br> ул. Европейская, 155 
+              </div>
+              <div class="logo">
+                <img src="./img/naprint.com.ua (1).png" alt="">
+              </div>
+              <div class="number" onclick="numPopUp()">
+                <span>000 123 45 67</span>
+              </div>
+              <div class="b-popup">
+                <div class="b-popup-content">
+                    <span class="close" onclick="closePopUp()"><a href="#"><img src="./img/+ (2).png" alt=""></a></span>
+                    <span >
+                        <h2>Оставте номер телефона</h2>
+                    </span>
+                    <p>Наш консультант вам перезвонит<br> через некоторое время</p>
+                    <form action="#" class="d-flex">
+                        <input type="text" placeholder="Ваш телефон" name="phone">
+                        <button>Оставить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="catalog">
+        <div class="tabs">
+            <a href="./index.html">Главная</a> 
+            -
+            <a href="#">Принты</a>
+            -
+            <a href="#" class="active-tab"><b>Футболки с принтами</b></a>
+        </div>
+        <div class="title-of-catalog">
+            <h2>
+                Футболки с принтами
+            </h2>
+        </div>
+        <div class="container">
+            <div class="filter">
+                <div class="slidecontainer">
+                    <div class="price-range"><!--price-range-->
+                        <!-- change -->
+                        <div class="container-for-filter">
+                            <h2>Price Range</h2>
+                            <span>
+                                <img src="./img/Arrow.png" alt="" class="change-visible-for-close-button"  onclick="hideFilter()" height="16px" width="33px">
+                            </span>
+                        </div>
+                        <!-- end -->
+						<div class="well">
+							 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
+							 <b>$ 0</b> <b class="pull-right">$ 600</b>
+						</div>
+					</div><!--/price-range-->
+                </div>
+                <hr>
+                <div class="collection">
+                    <h2>
+                        КОЛЛЕКЦИЯ:
+                    </h2>
+                    <form action="#">
+                        <div class="first-column">
+                            <div class="check">
+                                <input type="checkbox" name="AMERICANDESIGNS" id="AMERICANDESIGNS">
+                                <label for="AMERICANDESIGNS">AMERICAN DESIGNS</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="Charity" id="Charity">
+                                <label for="Charity">Charity</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="SIDART" id="SIDART">
+                                <label for="SIDART">SIDART</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="friends" id="friends">
+                                <label for="friends">Друзья</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="2" id="2">
+                                <label for="2">Звісно, ощад </label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="3" id="3">
+                                <label for="3">Cool</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="4" id="4">
+                                <label for="4">Nice</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="5" id="5">
+                                <label for="5">Addidas</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="6" id="6">
+                                <label for="6">Nike</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="7" id="7">
+                                <label for="7">Fuck</label>
+                            </div>
+                        </div>
+                        <div class="second-column">
+                            <div class="check">
+                                <input type="checkbox" name="8" id="8">
+                                <label for="8">AMERICAN DESIGNS</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="9" id="9">
+                                <label for="9">Charity</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="10" id="10">
+                                <label for="10">SIDART</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="11" id="11">
+                                <label for="11">Друзья</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="12" id="12">
+                                <label for="12">Звісно, ощад </label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="13" id="13">
+                                <label for="13">Cool</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="14" id="14">
+                                <label for="14">Nice</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="15" id="15">
+                                <label for="15">Addidas</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="16" id="16">
+                                <label for="16">Nike</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="17" id="17">
+                                <label for="17">Fuck</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <hr>
+                <div class="sex">
+                    <h2>
+                        ПОЛ:
+                    </h2>
+                    <div class="type-of-sex">
+                        <span class="men">
+                            <img src="./img/Group 18.png" alt="" width="65px" height="50px">
+                
+                        </span>
+                        <span class="women">
+                            <img src="./img/Group 19.png" alt="" width="67px" height="50px">
+                
+                        </span>
+                        <span class="children">
+                            <img src="./img/Group 19.1.png" alt="" width="37px" height="50px">
+
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="buttons">
+                    <!-- change -->
+                    <button class="for-filter" onclick="hideFilter()">
+                        <!-- end -->
+                        <b>Фильтровать</b>
+                    </button>
+                    <button class="for-remove-filter">
+                        <b>Сбросить</b>
+                    </button>
+                </div>
+
+            </div>
+            <!-- changes -->
+            <button class="for-filter change-visible" onclick="showFilter()">
+                <b>Фильтр</b>
+            </button>
+            <!-- end -->
+            <div class="pagination">
+                <span class="sort">
+                    Сотрировать:
+                    <div class="box">
+                        <form>
+                          <select>
+                              <option>По цене (возростание)</option>
+                              <option>По цене (уменьшение)</option>
+                              <option>Популярности</option>
+                          </select>
+                        </form>
+                      </div>
+                </span>
+                <div class="items">
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./img/image.png" alt="t-shirt"  height="246px" width="246px">
+                        <span class="name-of-item">
+                            ФУТБОЛКА С ПРИНТОМ 2PAC 
+                        </span>
+                        <div class="price-of-item">
+                            <span class="sale">
+                                327 грн
+                            </span>
+                            <span class="price">
+                                278 грн
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagin">
+                    <img src="./img/Arrow.png" alt="" height="16px" width="33px">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                1
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                2
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                3
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                4
+                            </a>
+                        </li>
+                        <!-- change -->
+                        <li class="vis">
+                            <a href="#">
+                                5
+                            </a>
+                        </li>
+                        <li class="vis">
+                            <a href="#">
+                                6
+                            </a>
+                        </li>
+                        <li class="vis">
+                            <a href="#">
+                                7
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                посленяя
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="./img/Arrow9.png" alt="" height="16px" width="33px">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="offer">
+        <p>
+            Магазин предлагает яркие футболки с интересными изображениями логотипов известных фильмов, сериалов, мультсериалов и их героев. У нас можно приобрести футболку с принтом любимой музыкальной группы, с юмористическими, детскими, спортивными изображениями, а также с рисунками забавных животных. Изготовлены с четким соблюдением технологий. Изображение не тускнеет, обладает хорошей стойкостью, насыщенностью красок, смотрится очень дорого. Футболки сделаны из хлопка, который обладает высокими влагопоглощающими свойствами, в связи с чем не вызывает аллергию, не раздражает кожу с повышенной чувствительностью. Прекрасный вариант для тех, кому хочется выглядеть ярко и креативно. У нас можно заказать футболку в один клик.
+        </p>
+    </section>
+    <section class="subscribe">
+        <span class="d-flex">
+            <h2>ПОДПИШИТЕСЬ НА НАШИ НОВОСТИ</h2>
+        </span>
+        <form action="#" class="d-flex">
+            <input type="text" placeholder="Ваш e-mail" name="e-mail">
+            <button>Подписаться</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-info d-flex">
+            <div class="logo-footer">
+                <img src="./img/naprint.com.ua (2).png" alt="">
+            </div>
+            <div class="info-about-company">
+                <ul>
+                    <li class="title">Информация</li>
+                    <a href="#"><li>Конструктор</li></a>
+                    <a href="#"><li>Размерная сетка </li></a>
+                    <a href="#"><li>Цены</li></a>
+                    <a href="#"><li>Доставка/оплата</li></a>
+                </ul>
+            </div>
+            <div class="info-about-cooperation">
+                <ul>
+                    <li class="title">Сотрудничество</li>
+                    <a href="#"><li>Сотрудничество</li></a>
+                    <a href="#"><li>Дизайнерам  </li></a>
+                    <a href="#"><li>Договор оферты для дизайнеров</li></a>
+                </ul>
+            </div>
+            <div class="info-about-cooperation">
+                <ul>
+                    <li class="title">000 123 45 67</li>
+                    <li>Украина, Киев, ул. Семьи<br> Хохловых, 8</li>
+                    <a href="#"><li class="e-mail-footer">admin@naprint.com.ua</li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="partners d-flex">
+            <div class="conditions">
+                <a href="#" class="cond">Условия использования<br> Обмен и возврат товара</a>
+            </div>
+            <div class="our-partners">
+                <span>Наши партнеры:</span>
+                <ul class="d-flex">
+                    <a href="#"><li><img src="./img/Group 17.2.png" alt=""></li></a>
+                    <a href="#"><li><img src="./img/Group 17.2.png" alt=""></li></a>
+                    <a href="#"><li><img src="./img/Group 17.2.png" alt=""></li></a>
+                </ul>
+            </div>
+            <div class="social-network-footer">
+                <span>Мы в социальных сетях:</span>
+                <ul class="d-flex">
+                    <a href="#"><li><img src="./img/youtube-footer.png" alt=""></li></a>
+                    <a href="#"><li><img src="./img/Vector (14).png" alt=""></li></a>
+                    <a href="#"><li><img src="./img/Vector (15).png" alt=""></li></a>
+                    <a href="#"><li><img src="./img/instagram-footer.png" alt=""></li></a>
+                </ul>
+            </div>
+            <div class="accept">
+                <span>Мы принимаем:</span>
+            </div>
+        </div>
+        <div class="info-about-site d-flex">
+            <div class="copyright">
+                Copyright ©2019 Naprint.com.ua.<br> All rights reserved.
+            </div>
+            <div class="cookie">
+                <span>
+                    Этот сайт использует cookie-файлы для предоставления услуг в соответствии с нашей политикой конфиденциальности.<br> Вы можете указать условия хранения или доступа cookie в вашем браузере.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
