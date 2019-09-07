@@ -1,0 +1,209 @@
+@font-face{
+    font-family: 'Proximanova';
+    src: url('../fonts/proximanova/ProximaNova-Extrabld.ttf')
+}
+
+@font-face{
+    font-family: 'Proximanova regular';
+    src: url('../fonts/proximanova/ProximaNova-Regular.ttf')
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 100%;
+	animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.logo {
+    margin-left: 140px;
+}
+
+.wrapper-menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-right: 170px;
+  transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+  transform: rotate(-45deg);  
+}
+
+.line-menu {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 6px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.open .line-menu.start {
+  transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-3px);
+}
+
+.greet{
+    font-family: Proximanova;
+    padding-top: 40px;
+}
+
+.name{
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+    font-size: 90px;
+}
+
+.name h1{
+    margin: 0;
+    margin-left: 90px;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+.name h2{
+    font-size: 30px;
+    position: absolute;
+    width: 27%;
+    top: 200px;
+    left: 950px;
+    font-family: Proximanova regular;
+    text-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.crystall {
+    position: relative;
+    z-index: 2;
+    transform-style: preserve-3d;
+}
+
+.crystall-1:before {
+    background-image: url('../img/polygon-color-R-line.svg');
+}
+
+.crystall-1:after {
+    background-image: url('../img/polygon-color-R-shape.svg');
+}
+
+.crystall-2:before {
+    background-image: url('../img/polygon-color-U-shape\ \(1\).svg');
+}
+
+.crystall-2:after {
+    background-image: url('../img/polygon-color-U-shape.svg');
+}
+
+.name h1::before {
+  background: radial-gradient(circle at 70% 50%,
+           rgba(208, 208, 208, 1) 5%,
+           rgba(208, 208, 208, 0) 45%
+           ) no-repeat 50% 50%;  
+}
+
+
+.crystall {
+  position: relative;
+  z-index: 2;
+  transform-style: preserve-3d;
+}
+
+.crystall::before,
+.crystall::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+  top: 50%;
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0));
+}
+
+.crystall::before {
+  z-index: -1;
+}
+
+.crystall::after {
+  z-index: 1;
+}
+
+
+.crystall-1::before,
+.crystall-1::after {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 49.23%;
+  animation: drifting1 10s cubic-bezier(0.33, 0, 0.66, 1) 1s infinite;
+}
+
+.crystall-2::before,
+.crystall-2::after {
+  top: 0;
+  left: -20%;
+  width: 60%;
+  height: 29.44%;  
+  animation:  drifting2 10s cubic-bezier(0.33, 0, 0.66, 1) 1s infinite;
+}
+
+@keyframes drifting1 {
+  0% {transform: rotate(0deg) translate(0%, 0%) translateZ(0)}
+  25% {transform: rotate(4deg) translate(6%, -4%) translateZ(0)}  
+  50% {transform: rotate(0deg) translate(-2%, 4%) translateZ(0)}  
+  75% {transform: rotate(4deg) translate(4%, -4%) translateZ(0)}
+  100% {transform: rotate(0deg) translate(0%, 0%) translateZ(0)}
+}
+@keyframes drifting2 {
+  0% {transform: rotate(0deg) translate(0%, 0%) translateZ(0)}
+  25% {transform: rotate(5deg) translate(3%, -3%) translateZ(0)}  
+  50% {transform: rotate(0deg) translate(-2%, 2%) translateZ(0)}  
+  75% {transform: rotate(5deg) translate(3%, -3%) translateZ(0)}
+  100% {transform: rotate(0deg) translate(0%, 0%) translateZ(0)}
+}
