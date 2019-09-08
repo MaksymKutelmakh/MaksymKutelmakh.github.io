@@ -27,6 +27,9 @@ setTimeout(
   }
 ,6500);
 
+
+
+
 function flex(){
   $('.nav').css('display','flex');
 }
