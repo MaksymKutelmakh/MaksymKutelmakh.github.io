@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./scss/loader.scss" rel="stylesheet/scss" type="text/css">
+    <link rel="stylesheet/scss" type="text/scss" href="./scss/loader.scss" />
     <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
 </head>
-<body>
+<body onload='hideLoader()'>
+    <div class="loader">
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__ball"></div>
+    </div>
     <header class="header">
         <svg x="0px" y="0px" width="18" height="18" viewBox="0 0 172 172" style=" fill:#000000;"></svg>
         <nav class="nav">
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <img src="./img/LOGOOFSITE.png" alt="logo" width="200px" height="80px">
                 </a>
             </div>
@@ -26,15 +36,32 @@
         <div class="greet">
             <div class="name">
                 <h1>Maksy<span class="crystall crystall-1">m</span><br> K<span class="crystall crystall-2">u</span>telmakh</h1>
-                <h2> - Junior Front-end Developer , who loves your own job and do it with love and responsiblity. </h2>
+                <h2> - Junior Front-end Developer , who loves his own job and do it with love and responsiblity. </h2>
             </div>
         </div>
         
     </header>
+    <section class="i">
+        fedgerg
+    </section>
+    <section class="i">
+        fedgerg
+    </section>
+    <section class="i">
+        fedgerg
+    </section>
+    <section class="i">
+        fedgerg
+    </section>
 
     
 </body>
 
 <script src="./js/jquery-3.4.1.min.js"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+  integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+  crossorigin="anonymous"></script>
 <script src="./js/main.js"></script>
+
 </html>
