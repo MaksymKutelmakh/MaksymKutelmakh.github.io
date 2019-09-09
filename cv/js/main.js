@@ -22,7 +22,7 @@ setTimeout(
     ,1);
     $(".greet").show("drop", { direction: "down" }, "slow");
     setTimeout(
-      $('.i').show()
+      $('.hero').show()
     ,1)
   }
 ,6500);
@@ -32,4 +32,5 @@ setTimeout(
 
 function flex(){
   $('.nav').css('display','flex');
+  $('.i').css('display','flex');
 }

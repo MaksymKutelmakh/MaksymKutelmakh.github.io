@@ -8,6 +8,11 @@
     src: url('../fonts/proximanova/ProximaNova-Regular.ttf')
 }
 
+@font-face{
+  font-family: 'Neosanspro';
+  src: url('../fonts/neosanspro/NeoSansPro-Regular.ttf')
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -401,5 +406,72 @@ body {
 }
 
 .i{
+  display: none ;
+}
+
+.hero__content h2{
+  font-family: Proximanova;
+  font-size: 9vw;
+  margin-left: 101px;
+}
+
+.my-photo img{
+  width: 184px;
+  height: 164px;
+}
+
+.info-about-me{
+  font-family: Neosanspro;
+  width: 40%;
+    padding-left: 20px;
+}
+
+.wrapper{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.hero {
+  min-height: 30rem;
+  position: relative;
+  overflow: hidden;
   display: none;
+  justify-content: center;
+  align-content: center;
+}
+.hero__content {
+  position: relative;
+  align-self: center;
+  padding: 3rem 0;
+}
+.snow {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.snow .svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#snow-top-layer {
+  will-change: transform;
+  transform: translateY(-768px);
+  animation: fall 22.5s infinite linear;
+}
+#snow-bottom-layer {
+  will-change: transform;
+  transform: translateY(-768px);
+  animation: fall 45s infinite linear;
+}
+@keyframes fall {
+  100% {
+    transform: translateY(0);
+  }
 }
