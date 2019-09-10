@@ -296,7 +296,7 @@ body {
     display: flex;
     justify-content: space-between;
     cursor: default;
-    font-size: 90px;
+    font-size: 5.8vw;
 }
 
 .name h1{
@@ -410,6 +410,7 @@ body {
 }
 
 .hero__content h2{
+  display: none;
   font-family: Proximanova;
   font-size: 9vw;
   margin-left: 101px;
@@ -427,10 +428,11 @@ body {
 }
 
 .wrapper{
-  display: flex;
+  display: none;
     justify-content: center;
     align-items: center;
     padding-bottom: 80px;
+    padding-left: 1px;
 }
 
 .hero {
