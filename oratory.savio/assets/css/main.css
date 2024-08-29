@@ -250,7 +250,7 @@ h6 {
 }
 
 .header img {
-  transition-duration: 2s;
+  transition-duration: 5s;
   width: 180px;
   height: 180px;
 }
@@ -266,9 +266,9 @@ h6 {
 }
 
 .scrolled .header img {
-  height: 60px !important;
-  width: 60px !important;
-  transition-duration: 2s;
+  height: 40px !important;
+  width: 105px !important;
+  transition-duration: 5s;
 }
 
 
@@ -911,6 +911,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services .service-item {
+  cursor: pointer;
   background-color: var(--surface-color);
   padding: 50px 30px;
   margin-top: 36px;
