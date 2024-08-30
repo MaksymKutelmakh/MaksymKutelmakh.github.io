@@ -919,6 +919,14 @@ section,
   position: relative;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   text-align: center;
+  height: 90%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .services .service-item .icon {
@@ -1080,11 +1088,18 @@ section,
   overflow: hidden;
 }
 
-.portfolio .event-content {
+.event-content {
   background-color: var(--surface-color);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
   height: 100%;
   overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .portfolio .portfolio-content img {
