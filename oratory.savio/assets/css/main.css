@@ -1458,7 +1458,7 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
-.team .team-member {
+.team-member {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -1469,46 +1469,46 @@ section,
 }
 
 @media (max-width: 468px) {
-  .team .team-member {
+  .team-member {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
   }
 }
 
-.team .team-member .pic {
+.team-member .pic {
   overflow: hidden;
   width: 150px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
-.team .team-member .pic img {
+.team-member .pic img {
   transition: ease-in-out 0.3s;
 }
 
-.team .team-member:hover {
+.team-member:hover {
   transform: translateY(-10px);
 }
 
-.team .team-member .member-info {
+.team-member .member-info {
   padding-left: 30px;
 }
 
 @media (max-width: 468px) {
-  .team .team-member .member-info {
+  .team-member .member-info {
     padding: 30px 0 0 0;
     text-align: center;
   }
 }
 
-.team .team-member h4 {
+.team-member h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
 }
 
-.team .team-member span {
+.team-member span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
@@ -1516,7 +1516,7 @@ section,
   font-weight: 500;
 }
 
-.team .team-member span::after {
+.team-member span::after {
   content: "";
   position: absolute;
   display: block;
@@ -1528,17 +1528,17 @@ section,
 }
 
 @media (max-width: 468px) {
-  .team .team-member span::after {
+  .team-member span::after {
     left: calc(50% - 25px);
   }
 }
 
-.team .team-member p {
+.team-member p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
 
-.team .team-member .social {
+.team-member .social {
   margin-top: 12px;
   display: flex;
   align-items: center;
@@ -1547,12 +1547,12 @@ section,
 }
 
 @media (max-width: 468px) {
-  .team .team-member .social {
+  .team-member .social {
     justify-content: center;
   }
 }
 
-.team .team-member .social a {
+.team-member .social a {
   background: color-mix(in srgb, var(--default-color), transparent 94%);
   transition: ease-in-out 0.3s;
   display: flex;
@@ -1563,21 +1563,21 @@ section,
   height: 36px;
 }
 
-.team .team-member .social a i {
+.team-member .social a i {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-size: 16px;
   margin: 0 2px;
 }
 
-.team .team-member .social a:hover {
+.team-member .social a:hover {
   background: var(--accent-color);
 }
 
-.team .team-member .social a:hover i {
+.team-member .social a:hover i {
   color: var(--contrast-color);
 }
 
-.team .team-member .social a+a {
+.team-member .social a+a {
   margin-left: 8px;
 }
 
