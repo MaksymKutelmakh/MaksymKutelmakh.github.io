@@ -1013,11 +1013,11 @@ section,
   margin: 10px 0 0 0;
 }
 
-.features .nav-link:hover {
-  color: var(--accent-color);
-}
+/*.features .nav-link:hover {*/
+/*  color: var(--accent-color);*/
+/*}*/
 
-.features .nav-link:hover,
+/*.features .nav-link:hover,*/
 .features .nav-link.active {
   transition: 0.3s;
   background: var(--accent-color);
@@ -1025,12 +1025,12 @@ section,
   border-color: var(--accent-color);
 }
 
-.features .nav-link:hover h4,
+/*.features .nav-link:hover h4,*/
 .features .nav-link.active h4 {
   color: var(--contrast-color);
 }
 
-.features .nav-link:hover i,
+/*.features .nav-link:hover i,*/
 .features .nav-link.active i {
   color: var(--contrast-color) !important;
 }

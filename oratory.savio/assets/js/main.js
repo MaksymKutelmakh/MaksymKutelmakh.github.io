@@ -151,7 +151,33 @@
 
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    // Знаходимо всі кнопки
+    const buttons = document.querySelectorAll('a[data-target]');
 
+    // Додаємо обробник події для кожної кнопки
+    buttons.forEach((button) => {
+      button.addEventListener('click', function () {
+        // Отримуємо значення data-target кнопки
+        const targetId = button.getAttribute('data-target');
+
+        // Ховаємо всі блоки
+        const items = document.querySelectorAll('.item');
+        items.forEach((item) => {
+          item.classList.remove('show');
+          item.classList.remove('active');
+        });
+
+        // Показуємо відповідний блок
+        const targetItem = document.getElementById(targetId);
+        if (targetItem) {
+          targetItem.classList.add('show');
+          targetItem.classList.add('active');
+
+        }
+      });
+    });
+  });
   /**
    * Init swiper sliders
    */
@@ -178,6 +204,31 @@
               }
             },
             slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              type: "bullets",
+              clickable: true
+            }
+          }
+
+
+      if (swiperElement.classList.contains("swiper-tab")) {
+        initSwiperWithCustomPagination(swiperElement, config);
+      } else {
+        new Swiper(swiperElement, config);
+      }
+    });
+
+    document.querySelectorAll(".init-work-swiper").forEach(function(swiperElement) {
+      let config =
+          {
+            loop: true,
+            speed: 600,
+            autoplay: {
+              delay: 5000
+            },
+            slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
               el: ".swiper-pagination",
