@@ -250,7 +250,7 @@ h6 {
 }
 
 .header img {
-  transition-duration: 5s;
+  transition-duration: 2s;
   width: 180px;
   height: 180px;
 }
@@ -1062,6 +1062,64 @@ section,
   margin-bottom: 0;
 }
 
+
+ .member {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  text-align: center;
+  margin-bottom: 20px;box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);transition: 0.5s;
+}
+
+.member:hover {
+  transform: translateY(-10px);
+}
+
+.member img {
+  margin: -1px -1px 30px -1px;
+}
+
+.member .member-content {
+  padding: 0 20px 30px 20px;
+}
+
+.member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.member p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.member .social {
+  margin-top: 15px;
+}
+
+.member .social a {
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+  transition: 0.3s;
+}
+
+.member .social a:hover {
+  color: var(--accent-color);
+}
+
+.member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1331,7 +1389,7 @@ section,
   font-size: 20px;
 }
 
-.pricing h4 {
+.pricing-shop h6 {
   color: var(--accent-color);
   font-size: 48px;
   font-weight: 700;
@@ -1339,11 +1397,11 @@ section,
   margin-bottom: 0;
 }
 
-.pricing h4 sup {
+.pricing-shop h6 sup {
   font-size: 28px;
 }
 
-.pricing h4 span {
+.pricing-shop h6 span {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 18px;
   font-weight: 500;

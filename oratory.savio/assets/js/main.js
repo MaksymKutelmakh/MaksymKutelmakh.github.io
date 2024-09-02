@@ -183,6 +183,7 @@
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+      
       let config =
           {
             loop: true,
