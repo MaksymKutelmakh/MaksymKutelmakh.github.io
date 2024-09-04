@@ -151,6 +151,32 @@
 
   });
 
+//   document.addEventListener("DOMContentLoaded", function () {
+//     // Знаходимо всі кнопки
+//     const buttons = document.getElementsByClassName('nav-link-item');
+//
+//     // Додаємо обробник події для кожної кнопки
+//     [].slice.call(buttons).forEach((button) => {
+//       button.addEventListener('click', function () {
+//         // Отримуємо значення data-target кнопки
+//         const targetId = button.getAttribute('data-bs-target');
+//         const test = document.getElementById(targetId.substring(1));
+// console.log(test.querySelectorAll('.item'));
+//         // Ховаємо всі блоки
+//         const items = document.querySelectorAll('.item');
+//         items.forEach((item) => {
+//           item.classList.remove('show');
+//           item.classList.remove('active');
+//         });
+// test.forEach(item => console.log(item))
+//         // Показуємо відповідний блок
+//           test[0].classList.add('show');
+//           test[0].classList.add('active');
+//
+//       });
+//     });
+//   });
+
   document.addEventListener("DOMContentLoaded", function () {
     // Знаходимо всі кнопки
     const buttons = document.querySelectorAll('a[data-target]');
@@ -183,7 +209,7 @@
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      
+
       let config =
           {
             loop: true,
