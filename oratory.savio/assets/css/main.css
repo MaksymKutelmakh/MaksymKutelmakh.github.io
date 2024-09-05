@@ -1194,6 +1194,10 @@ section,
   .about .nav-link {
     font-size: 16px;
   }
+  .about .nav li {
+    width: 50%;
+    margin-left: 0px !important;
+  }
 }
 
 .about .tab-content h4 {
@@ -1596,7 +1600,7 @@ section,
   margin: 10px 0 0 0;
   font-size: 14px;
 }
-
+.team-member .social-info-card,
 .team-member .social {
   margin-top: 12px;
   display: flex;
@@ -1608,6 +1612,13 @@ section,
 @media (max-width: 468px) {
   .team-member .social {
     justify-content: center;
+  }
+  .team-member .social-info-card {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .team-member .social-info-card a {
+    width: auto;
   }
 }
 
