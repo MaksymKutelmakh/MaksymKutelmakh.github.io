@@ -428,7 +428,7 @@
               style="
                 --swiper-navigation-color: #2dc997;
                 --swiper-pagination-color: #2dc997;
-                padding-bottom: 20px;
+                padding-bottom: 25px;
                 padding-top: 25px;
               "
               class="portfolio-details-slider swiper init-swiper"
@@ -470,7 +470,7 @@
                   />
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination swiper-pagination-0"></div>
             </div>
           </div>
         </div>
@@ -509,7 +509,7 @@
       <section id="activity" class="activity section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Наша діяльність</h2>
-          <p>Дізнайтеся більше про нашу діяльність</p>
+          <p>Дізнайтеся про наші можливості для розвитку і навчання</p>
         </div>
         <!-- End Section Title -->
         <div class="container" data-aos="fade-up">
@@ -519,6 +519,7 @@
                 class="nav-link nav-link-item active show"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-1"
+                onclick="setDefaultTab('formation-tab-1')"
               >
                 <i class="bi bi-binoculars" style="color: #0dcaf0"></i>
                 <h4>Формація</h4>
@@ -531,6 +532,7 @@
                 class="nav-link nav-link-item"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-2"
+                onclick="setDefaultTab('camp-tab-1')"
               >
                 <i class="bi bi-box-seam" style="color: #6610f2"></i>
                 <h4>Табори</h4>
@@ -543,6 +545,7 @@
                 class="nav-link nav-link-item"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-3"
+                onclick="setDefaultTab('savio-tab-1')"
               >
                 <i class="bi bi-brightness-high" style="color: #20c997"></i>
                 <h4>Savio Center</h4>
@@ -598,7 +601,7 @@
                   <div class="col-lg-5">
                     <div class="tab-content">
                       <div
-                        id="block3"
+                        id="formation-tab-1"
                         class="about-img item tab-pane fade show active"
                       >
                         <div
@@ -606,7 +609,7 @@
                             --swiper-navigation-color: #2dc997;
                             --swiper-pagination-color: #2dc997;
                           "
-                          class="portfolio-details-slider swiper init-work-swiper"
+                          class="portfolio-details-slider swiper init-work-swiper-1"
                         >
                           <div class="swiper-wrapper align-items-center">
                             <div class="swiper-slide">
@@ -645,16 +648,21 @@
                               />
                             </div>
                           </div>
-                          <div class="swiper-pagination"></div>
+                          <div
+                            class="swiper-pagination swiper-pagination-1"
+                          ></div>
                         </div>
                       </div>
-                      <div class="about-img item tab-pane fade" id="block4">
+                      <div
+                        class="about-img item tab-pane fade"
+                        id="formation-tab-2"
+                      >
                         <div
                           style="
                             --swiper-navigation-color: #2dc997;
                             --swiper-pagination-color: #2dc997;
                           "
-                          class="portfolio-details-slider swiper init-work-swiper"
+                          class="portfolio-details-slider swiper init-work-swiper-2"
                         >
                           <div class="swiper-wrapper align-items-center">
                             <div class="swiper-slide">
@@ -693,7 +701,9 @@
                               />
                             </div>
                           </div>
-                          <div class="swiper-pagination"></div>
+                          <div
+                            class="swiper-pagination swiper-pagination-2"
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -710,18 +720,18 @@
                       <li>
                         <a
                           class="nav-link active"
-                          data-target="block3"
+                          data-target="formation-tab-1"
                           data-bs-toggle="pill"
-                          href="#about-tab1"
+                          href="#about-formation-tab-1"
                           >Резуми</a
                         >
                       </li>
                       <li>
                         <a
                           class="nav-link"
-                          data-target="block4"
+                          data-target="formation-tab-2"
                           data-bs-toggle="pill"
-                          href="#about-tab2"
+                          href="#about-formation-tab-2"
                           >Курси Аніматора</a
                         >
                       </li>
@@ -730,7 +740,10 @@
 
                     <!-- Tab Content -->
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="about-tab1">
+                      <div
+                        class="tab-pane fade show active"
+                        id="about-formation-tab-1"
+                      >
                         <p class="fst-italic">
                           "Резуми" — це регулярні релігійні зустрічі молоді, що
                           проводяться в нашій спільноті для глибшого пізнання
@@ -780,7 +793,7 @@
                       </div>
                       <!-- End Tab 1 Content -->
 
-                      <div class="tab-pane fade" id="about-tab2">
+                      <div class="tab-pane fade" id="about-formation-tab-2">
                         <p class="fst-italic">
                           Курси аніматорів — це освітньо-формаційні програми,
                           спрямовані на підготовку молодих людей до служіння в
@@ -848,7 +861,7 @@
                   <div class="col-lg-5">
                     <div class="tab-content">
                       <div
-                        id="block1"
+                        id="camp-tab-1"
                         class="about-img item tab-pane fade show active"
                       >
                         <div
@@ -856,7 +869,7 @@
                             --swiper-navigation-color: #2dc997;
                             --swiper-pagination-color: #2dc997;
                           "
-                          class="portfolio-details-slider swiper init-work-swiper"
+                          class="portfolio-details-slider swiper init-work-swiper-3"
                         >
                           <div class="swiper-wrapper align-items-center">
                             <div class="swiper-slide">
@@ -895,16 +908,18 @@
                               />
                             </div>
                           </div>
-                          <div class="swiper-pagination"></div>
+                          <div
+                            class="swiper-pagination swiper-pagination-3"
+                          ></div>
                         </div>
                       </div>
-                      <div class="about-img item tab-pane fade" id="block2">
+                      <div class="about-img item tab-pane fade" id="camp-tab-2">
                         <div
                           style="
                             --swiper-navigation-color: #2dc997;
                             --swiper-pagination-color: #2dc997;
                           "
-                          class="portfolio-details-slider swiper init-work-swiper"
+                          class="portfolio-details-slider swiper init-work-swiper-4"
                         >
                           <div class="swiper-wrapper align-items-center">
                             <div class="swiper-slide">
@@ -943,16 +958,18 @@
                               />
                             </div>
                           </div>
-                          <div class="swiper-pagination"></div>
+                          <div
+                            class="swiper-pagination swiper-pagination-4"
+                          ></div>
                         </div>
                       </div>
-                      <div class="about-img item tab-pane fade" id="block30">
+                      <div class="about-img item tab-pane fade" id="camp-tab-3">
                         <div
                           style="
                             --swiper-navigation-color: #2dc997;
                             --swiper-pagination-color: #2dc997;
                           "
-                          class="portfolio-details-slider swiper init-work-swiper"
+                          class="portfolio-details-slider swiper init-work-swiper-5"
                         >
                           <div class="swiper-wrapper align-items-center">
                             <div class="swiper-slide">
@@ -991,7 +1008,9 @@
                               />
                             </div>
                           </div>
-                          <div class="swiper-pagination"></div>
+                          <div
+                            class="swiper-pagination swiper-pagination-5"
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -1007,27 +1026,27 @@
                       <li>
                         <a
                           class="nav-link active"
-                          data-target="block1"
+                          data-target="camp-tab-1"
                           data-bs-toggle="pill"
-                          href="#about-tab4"
+                          href="#about-camp-tab-1"
                           >Табір у Львові</a
                         >
                       </li>
                       <li>
                         <a
                           class="nav-link"
-                          data-target="block2"
+                          data-target="camp-tab-2"
                           data-bs-toggle="pill"
-                          href="#about-tab5"
+                          href="#about-camp-tab-2"
                           >Табір у Карпатах</a
                         >
                       </li>
                       <li>
                         <a
                           class="nav-link"
-                          data-target="block30"
+                          data-target="camp-tab-3"
                           data-bs-toggle="pill"
-                          href="#about-tab6"
+                          href="#about-camp-tab-3"
                           >Кемпінговий табір</a
                         >
                       </li>
@@ -1036,7 +1055,10 @@
 
                     <!-- Tab Content -->
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="about-tab4">
+                      <div
+                        class="tab-pane fade show active"
+                        id="about-camp-tab-1"
+                      >
                         <p class="fst-italic">
                           Наші табори проходять у місті Львів при церкві Покрови
                           Пресвятої Богородиці та створюють унікальну можливість
@@ -1081,7 +1103,7 @@
                       </div>
                       <!-- End Tab 1 Content -->
 
-                      <div class="tab-pane fade" id="about-tab5">
+                      <div class="tab-pane fade" id="about-camp-tab-2">
                         <p class="fst-italic">
                           Запрошуємо вас у незабутню подорож до серця Карпат —
                           села Коростів, де розташований
@@ -1130,7 +1152,7 @@
                       </div>
                       <!-- End Tab 2 Content -->
 
-                      <div class="tab-pane fade" id="about-tab6">
+                      <div class="tab-pane fade" id="about-camp-tab-3">
                         <p class="fst-italic">
                           Кемпінговий табір у мальовничих Карпатах — це
                           унікальна можливість відчути справжню красу гір, жити
@@ -1196,7 +1218,7 @@
                   <div class="col-lg-5">
                     <div class="tab-content">
                       <div
-                        id="block31"
+                        id="savio-tab-1"
                         class="about-img item tab-pane fade show active"
                       >
                         <div
@@ -1204,7 +1226,7 @@
                             --swiper-navigation-color: #2dc997;
                             --swiper-pagination-color: #2dc997;
                           "
-                          class="portfolio-details-slider swiper init-work-swiper"
+                          class="portfolio-details-slider swiper init-work-swiper-6"
                         >
                           <div class="swiper-wrapper align-items-center">
                             <div class="swiper-slide">
@@ -1243,16 +1265,21 @@
                               />
                             </div>
                           </div>
-                          <div class="swiper-pagination"></div>
+                          <div
+                            class="swiper-pagination swiper-pagination-6"
+                          ></div>
                         </div>
                       </div>
-                      <div class="about-img item tab-pane fade" id="block32">
+                      <div
+                        class="about-img item tab-pane fade"
+                        id="savio-tab-2"
+                      >
                         <div
                           style="
                             --swiper-navigation-color: #2dc997;
                             --swiper-pagination-color: #2dc997;
                           "
-                          class="portfolio-details-slider swiper init-work-swiper"
+                          class="portfolio-details-slider swiper init-work-swiper-7"
                         >
                           <div class="swiper-wrapper align-items-center">
                             <div class="swiper-slide">
@@ -1291,16 +1318,21 @@
                               />
                             </div>
                           </div>
-                          <div class="swiper-pagination"></div>
+                          <div
+                            class="swiper-pagination swiper-pagination-7"
+                          ></div>
                         </div>
                       </div>
-                      <div class="about-img item tab-pane fade" id="block33">
+                      <div
+                        class="about-img item tab-pane fade"
+                        id="savio-tab-3"
+                      >
                         <div
                           style="
                             --swiper-navigation-color: #2dc997;
                             --swiper-pagination-color: #2dc997;
                           "
-                          class="portfolio-details-slider swiper init-work-swiper"
+                          class="portfolio-details-slider swiper init-work-swiper-8"
                         >
                           <div class="swiper-wrapper align-items-center">
                             <div class="swiper-slide">
@@ -1339,7 +1371,9 @@
                               />
                             </div>
                           </div>
-                          <div class="swiper-pagination"></div>
+                          <div
+                            class="swiper-pagination swiper-pagination-8"
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -1355,27 +1389,27 @@
                       <li>
                         <a
                           class="nav-link active"
-                          data-target="block31"
+                          data-target="savio-tab-1"
                           data-bs-toggle="pill"
-                          href="#about-tab7"
+                          href="#about-savio-tab-1"
                           >Про нас</a
                         >
                       </li>
                       <li>
                         <a
                           class="nav-link"
-                          data-target="block32"
+                          data-target="savio-tab-2"
                           data-bs-toggle="pill"
-                          href="#about-tab8"
+                          href="#about-savio-tab-2"
                           >Гуртки</a
                         >
                       </li>
                       <li>
                         <a
                           class="nav-link"
-                          data-target="block33"
+                          data-target="savio-tab-3"
                           data-bs-toggle="pill"
-                          href="#about-tab9"
+                          href="#about-savio-tab-3"
                           >Стретка</a
                         >
                       </li>
@@ -1384,7 +1418,10 @@
 
                     <!-- Tab Content -->
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="about-tab7">
+                      <div
+                        class="tab-pane fade show active"
+                        id="about-savio-tab-1"
+                      >
                         <p class="fst-italic">
                           "Savio Center" — це центр позашкільної освіти, де діти
                           та молодь можуть розвиватися у дружньому та
@@ -1431,7 +1468,7 @@
                       </div>
                       <!-- End Tab 2 Content -->
 
-                      <div class="tab-pane fade" id="about-tab8">
+                      <div class="tab-pane fade" id="about-savio-tab-2">
                         <div class="row">
                           <div
                             class="col-lg-6 mb-4"
@@ -1815,7 +1852,7 @@
                       </div>
                       <!-- End Tab 1 Content -->
 
-                      <div class="tab-pane fade" id="about-tab9">
+                      <div class="tab-pane fade" id="about-savio-tab-3">
                         <p class="fst-italic">
                           "Стретка" у "Savio Center" — це регулярні зустрічі для
                           молоді, що відбуваються окремо для дівчат і хлопців.
@@ -1920,7 +1957,7 @@
                           --swiper-navigation-color: #2dc997;
                           --swiper-pagination-color: #2dc997;
                         "
-                        class="portfolio-details-slider swiper init-work-swiper"
+                        class="portfolio-details-slider swiper init-work-swiper-9"
                       >
                         <div class="swiper-wrapper align-items-center">
                           <div class="swiper-slide">
@@ -1959,7 +1996,9 @@
                             />
                           </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div
+                          class="swiper-pagination swiper-pagination-9"
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -1976,7 +2015,7 @@
                         <a
                           class="nav-link active"
                           data-bs-toggle="pill"
-                          href="#about-tab10"
+                          href="#about-catechization-tab-1"
                           >Про нас</a
                         >
                       </li>
@@ -1984,7 +2023,7 @@
                         <a
                           class="nav-link"
                           data-bs-toggle="pill"
-                          href="#about-tab11"
+                          href="#about-catechization-tab-2"
                           >Розклад</a
                         >
                       </li>
@@ -1993,7 +2032,10 @@
 
                     <!-- Tab Content -->
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="about-tab10">
+                      <div
+                        class="tab-pane fade show active"
+                        id="about-catechization-tab-1"
+                      >
                         <p class="fst-italic">
                           Катехитична школа при церкві Покрови Пресвятої
                           Богородиці УГКЦ забезпечує духовне виховання для дітей
@@ -2045,7 +2087,7 @@
                       </div>
                       <!-- End Tab 1 Content -->
 
-                      <div class="tab-pane fade" id="about-tab11">
+                      <div class="tab-pane fade" id="about-catechization-tab-2">
                         <div class="col-lg-9">
                           <img
                             src="assets/img/activity/catechetical_school/the_schedule_of_catechesis_in_the_catechetical_school.jpg"
@@ -2076,7 +2118,7 @@
                           --swiper-navigation-color: #2dc997;
                           --swiper-pagination-color: #2dc997;
                         "
-                        class="portfolio-details-slider swiper init-work-swiper"
+                        class="portfolio-details-slider swiper init-work-swiper-10"
                       >
                         <div class="swiper-wrapper align-items-center">
                           <div class="swiper-slide">
@@ -2115,7 +2157,9 @@
                             />
                           </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div
+                          class="swiper-pagination swiper-pagination-10"
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -2132,7 +2176,7 @@
                         <a
                           class="nav-link active"
                           data-bs-toggle="pill"
-                          href="#about-tab13"
+                          href="#about-church-tab-1"
                           >Про парафію</a
                         >
                       </li>
@@ -2140,7 +2184,7 @@
                         <a
                           class="nav-link"
                           data-bs-toggle="pill"
-                          href="#about-tab14"
+                          href="#about-church-tab-2"
                           >Історія храму</a
                         >
                       </li>
@@ -2148,7 +2192,7 @@
                         <a
                           class="nav-link"
                           data-bs-toggle="pill"
-                          href="#about-tab15"
+                          href="#about-church-tab-3"
                           >Розклад богослужінь</a
                         >
                       </li>
@@ -2156,7 +2200,7 @@
                         <a
                           class="nav-link"
                           data-bs-toggle="pill"
-                          href="#about-tab35"
+                          href="#about-church-tab-4"
                           >Контакти</a
                         >
                       </li>
@@ -2165,7 +2209,10 @@
 
                     <!-- Tab Content -->
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="about-tab13">
+                      <div
+                        class="tab-pane fade show active"
+                        id="about-church-tab-1"
+                      >
                         <p class="fst-italic">
                           Парафія церкви Покрови Пресвятої Богородиці УГКЦ у
                           Львові є центром духовного життя та місцем зустрічей
@@ -2215,7 +2262,7 @@
                       </div>
                       <!-- End Tab 1 Content -->
 
-                      <div class="tab-pane fade" id="about-tab14">
+                      <div class="tab-pane fade" id="about-church-tab-2">
                         <p class="fst-italic">
                           Легалізація Української Греко-Католицької Церкви у
                           1989 році відкрила шлях до відновлення церков та
@@ -2268,18 +2315,18 @@
                       </div>
                       <!-- End Tab 2 Content -->
 
-                      <div class="tab-pane fade" id="about-tab15">
+                      <div class="tab-pane fade" id="about-church-tab-3">
                         <div class="col-lg-9">
                           <img
-                            src="assets/img/schedule.jpg"
+                            src="assets/img/activity/church/schedule_of_divine_services_in_the_Church_of_the_Intercession_of_the_Holy_Virgin_UGCC_city_of_Lviv.jpg"
                             class="img-fluid"
-                            alt=""
+                            alt="Розклад Служб Божих в церкві Покрови Пресвятої Богородиці, УГКЦ місто Львів"
                           />
                         </div>
                       </div>
                       <!-- End Tab 3 Content -->
 
-                      <div class="tab-pane fade" id="about-tab35">
+                      <div class="tab-pane fade" id="about-church-tab-4">
                         <div
                           class="col-lg-12 mb-4"
                           data-aos="fade-up"
@@ -2365,7 +2412,7 @@
                           --swiper-navigation-color: #2dc997;
                           --swiper-pagination-color: #2dc997;
                         "
-                        class="portfolio-details-slider swiper init-work-swiper"
+                        class="portfolio-details-slider swiper init-work-swiper-11"
                       >
                         <div class="swiper-wrapper align-items-center">
                           <div class="swiper-slide">
@@ -2404,7 +2451,9 @@
                             />
                           </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div
+                          class="swiper-pagination swiper-pagination-11"
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -2421,7 +2470,7 @@
                         <a
                           class="nav-link active"
                           data-bs-toggle="pill"
-                          href="#about-tab16"
+                          href="#about-campus-tab-1"
                           >Про нас</a
                         >
                       </li>
@@ -2429,7 +2478,7 @@
                         <a
                           class="nav-link"
                           data-bs-toggle="pill"
-                          href="#about-tab17"
+                          href="#about-campus-tab-2"
                           >Контакти</a
                         >
                       </li>
@@ -2438,7 +2487,10 @@
 
                     <!-- Tab Content -->
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="about-tab16">
+                      <div
+                        class="tab-pane fade show active"
+                        id="about-campus-tab-1"
+                      >
                         <p class="fst-italic">
                           Проживання у CAMPUS «POKROVA» надає студентам
                           унікальну можливість для поглиблення свого
@@ -2486,7 +2538,7 @@
                       </div>
                       <!-- End Tab 1 Content -->
 
-                      <div class="tab-pane fade" id="about-tab17">
+                      <div class="tab-pane fade" id="about-campus-tab-2">
                         <div
                           class="col-lg-12 mb-4"
                           data-aos="fade-up"
@@ -3352,5 +3404,18 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+      function setDefaultTab(id) {
+        const items = document.querySelectorAll(".item");
+        items.forEach((item) => {
+          item.classList.remove("show");
+          item.classList.remove("active");
+        });
+        const selectedTab = document.getElementById(id);
+        selectedTab.classList.add("show");
+        selectedTab.classList.add("active");
+      }
+    </script>
   </body>
 </html>

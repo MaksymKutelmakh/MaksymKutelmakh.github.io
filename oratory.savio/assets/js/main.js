@@ -173,32 +173,6 @@
       });
   });
 
-  //   document.addEventListener("DOMContentLoaded", function () {
-  //     // Знаходимо всі кнопки
-  //     const buttons = document.getElementsByClassName('nav-link-item');
-  //
-  //     // Додаємо обробник події для кожної кнопки
-  //     [].slice.call(buttons).forEach((button) => {
-  //       button.addEventListener('click', function () {
-  //         // Отримуємо значення data-target кнопки
-  //         const targetId = button.getAttribute('data-bs-target');
-  //         const test = document.getElementById(targetId.substring(1));
-  // console.log(test.querySelectorAll('.item'));
-  //         // Ховаємо всі блоки
-  //         const items = document.querySelectorAll('.item');
-  //         items.forEach((item) => {
-  //           item.classList.remove('show');
-  //           item.classList.remove('active');
-  //         });
-  // test.forEach(item => console.log(item))
-  //         // Показуємо відповідний блок
-  //           test[0].classList.add('show');
-  //           test[0].classList.add('active');
-  //
-  //       });
-  //     });
-  //   });
-
   document.addEventListener("DOMContentLoaded", function () {
     // Знаходимо всі кнопки
     const buttons = document.querySelectorAll("a[data-target]");
@@ -234,7 +208,7 @@
         loop: true,
         speed: 600,
         autoplay: {
-          delay: 5000,
+          delay: 2000,
         },
         breakpoints: {
           320: {
@@ -254,7 +228,7 @@
         slidesPerView: 3,
         spaceBetween: 30,
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination-0",
           type: "bullets",
           clickable: true,
         },
@@ -267,30 +241,27 @@
       }
     });
 
-    document
-      .querySelectorAll(".init-work-swiper")
-      .forEach(function (swiperElement) {
-        let config = {
-          loop: true,
-          speed: 600,
-          autoplay: {
-            delay: 5000,
-          },
-          slidesPerView: 1,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            type: "bullets",
-            clickable: true,
-          },
-        };
-
-        if (swiperElement.classList.contains("swiper-tab")) {
-          initSwiperWithCustomPagination(swiperElement, config);
-        } else {
+    for (let i = 1; i < 12; i++) {
+      document
+        .querySelectorAll(".init-work-swiper-" + i)
+        .forEach(function (swiperElement) {
+          let config = {
+            loop: true,
+            speed: 600,
+            autoplay: {
+              delay: 2000,
+            },
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination-" + i,
+              type: "bullets",
+              clickable: true,
+            },
+          };
           new Swiper(swiperElement, config);
-        }
-      });
+        });
+    }
   }
 
   window.addEventListener("load", initSwiper);
