@@ -1036,6 +1036,27 @@ section,
   color: var(--contrast-color) !important;
 }
 
+@media (min-width: 875px) {
+  .activity .nav-link-item:hover {
+    color: var(--accent-color);
+  }
+
+  .activity .nav-link-item:hover{
+    transition: 0.3s;
+    background: var(--accent-color);
+    color: var(--contrast-color) !important;
+    border-color: var(--accent-color);
+  }
+
+  .activity .nav-link-item:hover h4{
+    color: var(--contrast-color);
+  }
+
+  .activity .nav-link-item:hover i {
+    color: var(--contrast-color) !important;
+  }
+}
+
 .activity .tab-content {
   margin-top: 30px;
 }
@@ -1324,13 +1345,17 @@ section,
   overflow: hidden;
 }
 
-.event-content {
+.events .event-content {
   background-color: var(--surface-color);
   -webkit-box-shadow: 6px 2px 17px 9px rgba(0,0,0,0.25);
   -moz-box-shadow: 6px 2px 17px 9px rgba(0,0,0,0.25);
   box-shadow: 6px 2px 17px 9px rgba(0,0,0,0.25);
   height: 100%;
   overflow: hidden;
+}
+
+.about .nav-pills {
+  height: 63px;
 }
 
 .swiper-slide {
@@ -1497,6 +1522,12 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
   border-color: var(--accent-color);
+}
+
+.pricing .featured .cta-btn:hover {
+  background:
+          color-mix(in srgb, var(--accent-color), transparent 20%);
+  text-decoration: none;
 }
 
 @media (max-width: 992px) {
@@ -1725,7 +1756,9 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background:
+          color-mix(in srgb, var(--accent-color), transparent 20%);
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -1871,7 +1904,7 @@ section,
 .google-maps {
   border: 0;
   width: 100%;
-  height: 470px;
+  height: 570px;
 }
 
 @media (max-width: 468px) {
