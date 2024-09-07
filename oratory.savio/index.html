@@ -519,7 +519,7 @@
                 class="nav-link nav-link-item active show"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-1"
-                onclick="setDefaultTab('formation-tab-1')"
+                onclick="setDefaultTab('formation-tab-1'); scrollDownClick()"
               >
                 <i class="bi bi-binoculars" style="color: #0dcaf0"></i>
                 <h4>Формація</h4>
@@ -532,7 +532,7 @@
                 class="nav-link nav-link-item"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-2"
-                onclick="setDefaultTab('camp-tab-1')"
+                onclick="setDefaultTab('camp-tab-1'); scrollDownClick()"
               >
                 <i class="bi bi-box-seam" style="color: #6610f2"></i>
                 <h4>Табори</h4>
@@ -545,7 +545,7 @@
                 class="nav-link nav-link-item"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-3"
-                onclick="setDefaultTab('savio-tab-1')"
+                onclick="setDefaultTab('savio-tab-1'); scrollDownClick()"
               >
                 <i class="bi bi-brightness-high" style="color: #20c997"></i>
                 <h4>Savio Center</h4>
@@ -558,6 +558,7 @@
                 class="nav-link nav-link-item"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-4"
+                onclick="scrollDownClick()"
               >
                 <i class="bi bi-command" style="color: #df1529"></i>
                 <h4>Катехитична школа</h4>
@@ -570,6 +571,7 @@
                 class="nav-link nav-link-item"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-5"
+                onclick="scrollDownClick()"
               >
                 <i class="bi bi-easel" style="color: #0d6efd"></i>
                 <h4>Парафія</h4>
@@ -582,6 +584,7 @@
                 class="nav-link nav-link-item"
                 data-bs-toggle="tab"
                 data-bs-target="#features-tab-6"
+                onclick="scrollDownClick()"
               >
                 <i class="bi bi-map" style="color: #fd7e14"></i>
                 <h4>Кампус для студентів</h4>
@@ -3406,6 +3409,14 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+      function scrollDownClick() {
+        if (window.screen.width < 750) {
+          window.scrollTo({
+            top: document.body.parentElement.scrollTop + 800,
+            behavior: "smooth",
+          });
+        }
+      }
       function setDefaultTab(id) {
         const items = document.querySelectorAll(".item");
         items.forEach((item) => {

@@ -1192,6 +1192,8 @@ section,
 
 .about .nav-pills li+li {
   margin-left: 40px;
+  height: 63px;
+
 }
 
 .about .nav-link {
@@ -1354,9 +1356,6 @@ section,
   overflow: hidden;
 }
 
-.about .nav-pills {
-  height: 63px;
-}
 
 .swiper-slide {
   text-align: center;
