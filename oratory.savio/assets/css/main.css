@@ -1418,6 +1418,13 @@ section,
   overflow: hidden;
 }
 
+#about img {
+  background-color: var(--surface-color);
+  -webkit-box-shadow: 6px 2px 17px 9px rgba(0,0,0,0.25);
+  -moz-box-shadow: 6px 2px 17px 9px rgba(0,0,0,0.25);
+  box-shadow: 6px 2px 17px 9px rgba(0,0,0,0.25);
+}
+
 
 .swiper-slide {
   text-align: center;
