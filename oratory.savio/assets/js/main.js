@@ -17,6 +17,7 @@
     const selectHeader = document.querySelector("#header");
     const logo = document.getElementById("logo");
     const logo_cut = document.getElementById("logo_cut");
+
     if (
       !selectHeader.classList.contains("scroll-up-sticky") &&
       !selectHeader.classList.contains("sticky-top") &&
