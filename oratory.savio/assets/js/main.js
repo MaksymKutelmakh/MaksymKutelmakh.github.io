@@ -204,6 +204,8 @@
    * Init swiper sliders
    */
   function initSwiper() {
+    document.getElementById("year").innerHTML =
+      "© " + new Date().getFullYear();
     document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = {
         loop: true,
