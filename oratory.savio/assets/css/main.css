@@ -1008,10 +1008,11 @@ section,
   line-height: 0;
 }
 
-.activity .nav-link h4 {
+.activity .nav-link .about-link-tab {
   font-size: 20px;
   font-weight: 600;
   margin: 10px 0 0 0;
+  line-height: 1.2;
 }
 
 /*.activity .nav-link:hover {*/
@@ -1027,7 +1028,7 @@ section,
 }
 
 /*.activity .nav-link:hover h4,*/
-.activity .nav-link.active h4 {
+.activity .nav-link.active .about-link-tab {
   color: var(--contrast-color);
 }
 
@@ -1048,7 +1049,7 @@ section,
     border-color: var(--accent-color);
   }
 
-  .activity .nav-link-item:hover h4{
+  .activity .nav-link-item:hover .about-link-tab{
     color: var(--contrast-color);
   }
 
@@ -1666,10 +1667,11 @@ section,
   }
 }
 
-.team-member h4 {
+.team-member .member-class {
   font-weight: 700;
-  margin-bottom: 5px;
+  /*margin-bottom: 5px;*/
   font-size: 20px;
+  color: var(--heading-color);
 }
 
 .team-member span {
