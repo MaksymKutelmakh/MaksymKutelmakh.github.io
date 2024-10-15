@@ -101,20 +101,32 @@
         <nav id="navmenu" class="navmenu">
           <nav>
             <ul>
-              <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
-              <li><a href="index.html" onclick="changeLanguage('ua')">عربي</a></li>
+              <li>
+                <a href="index.html" onclick="changeLanguage('en')">English</a>
+              </li>
+              <li>
+                <a href="index.html" onclick="changeLanguage('ua')">Ukraine</a>
+              </li>
             </ul>
           </nav>
           <ul>
-            <li><a href="#home" class="active" data-i18n="navmenu_home"></a></li>
+            <li>
+              <a href="#home" class="active" data-i18n="navmenu_home"></a>
+            </li>
             <li><a href="#about" data-i18n="navmenu_about"></a></li>
-            <li><a href="#missions">Наша місія</a></li>
+            <li>
+              <a href="#missions" data-i18n="navmenu_missions"></a>
+            </li>
             <!--            <li><a href="#events">Події</a></li>-->
-            <li><a href="#activity">Наша діяльність</a></li>
-            <li><a href="#team">Команда</a></li>
-            <li><a href="#pricing">Підтримка</a></li>
+            <li>
+              <a href="#activity" data-i18n="navmenu_activity"></a>
+            </li>
+            <li><a href="#team" data-i18n="navmenu_team"></a></li>
+            <li>
+              <a href="#pricing" data-i18n="pricing"></a>
+            </li>
             <!--            <li><a href="#shop">Сувеніри</a></li>-->
-            <li><a href="#contact">Контакти</a></li>
+            <li><a href="#contact" data-i18n="navmenu_contact"></a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -126,7 +138,7 @@
       <section id="home" class="home section dark-background">
         <img
           src="assets/img/background_banner_team_of_animators_of_the_Oratory_of_St_Dominic_Savio.JPG"
-          alt="Банер ораторії святого Домініка Савіо"
+          alt="Банер ораторії святого Домініка Савіо | Banner of the Oratory of Saint Dominic Savio"
           data-aos="fade-in"
         />
 
@@ -137,8 +149,14 @@
         >
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <h2>Ораторія ім. святого Домініка Савіо</h2>
-              <a href="#about" class="btn-get-started">Дізнайся більше</a>
+              <h2 data-i18n="home_main_header">
+                Ораторія ім. святого Домініка Савіо
+              </h2>
+              <a
+                href="#about"
+                class="btn-get-started"
+                data-i18n="home_learn_more_button"
+              ></a>
             </div>
           </div>
         </div>
@@ -3355,8 +3373,8 @@
       }
       // Function to update content based on selected language
       function updateContent(langData) {
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-          const key = element.getAttribute('data-i18n');
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
           console.log(key);
           console.log(langData);
           element.innerHTML = langData[key];
@@ -3364,7 +3382,7 @@
       }
       // Function to set the language preference
       function setLanguagePreference(lang) {
-        localStorage.setItem('language', lang);
+        localStorage.setItem("language", lang);
         location.reload();
       }
 
@@ -3382,8 +3400,8 @@
       }
 
       // Call updateContent() on page load
-      window.addEventListener('DOMContentLoaded', async () => {
-        const userPreferredLanguage = localStorage.getItem('language') || 'en';
+      window.addEventListener("DOMContentLoaded", async () => {
+        const userPreferredLanguage = localStorage.getItem("language") || "en";
         const langData = await fetchLanguageData(userPreferredLanguage);
         updateContent(langData);
         toggleArabicStylesheet(userPreferredLanguage);

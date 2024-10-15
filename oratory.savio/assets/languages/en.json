@@ -1,4 +1,11 @@
 {
   "navmenu_home": "Main",
-  "navmenu_about": "About us"
+  "navmenu_about": "About us",
+  "navmenu_missions": "Our mission",
+  "navmenu_activity": "Our activity",
+  "navmenu_team": "Team",
+  "pricing": "Support",
+  "navmenu_contact": "Contacts",
+  "home_main_header": "Oratory of Saint Dominic Savio",
+  "home_learn_more_button": "Learn more"
 }

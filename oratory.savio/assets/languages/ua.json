@@ -1,4 +1,11 @@
 {
   "navmenu_home": "Головна",
-  "navmenu_about": "Про нас"
+  "navmenu_about": "Про нас",
+  "navmenu_missions": "Наша місія",
+  "navmenu_activity": "Наша діяльність",
+  "navmenu_team": "Команда",
+  "pricing": "Підтримка",
+  "navmenu_contact": "Контакти",
+  "home_main_header": "Ораторія ім. святого Домініка Савіо",
+  "home_learn_more_button": "Дізнайся більше"
 }
