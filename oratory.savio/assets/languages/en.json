@@ -1,5 +1,5 @@
 {
-  "navmenu_home": "Main",
+  "navmenu_home": "Home",
   "navmenu_about": "About us",
   "navmenu_missions": "Our mission",
   "navmenu_activity": "Our activity",
@@ -98,5 +98,13 @@
   "support_section_3_option_1": "One-time support",
   "support_section_3_option_2": "Monthly support",
   "support_section_3_option_3": "Buy souvenir products (hoodies, T-shirts and shopping bags, where 30% is allocated to the development of oratory)",
-  "support_section_3_button_text": "Support"
+  "support_section_3_button_text": "Support",
+  "contacts_title": "Contacts",
+  "contacts_sub_text": "Choose the best way to contact us",
+  "contacts_address_field": "Address",
+  "contacts_address_value": "Lychakivska street, 175, Lviv, Lviv region, 79000",
+  "contacts_phone_field": "Phone",
+  "contacts_form_success_message": "Your message has been sent. Thank you!",
+  "contacts_form_button_text": "Send a message",
+  "footer_quote": "\"Being joyful, doing good and letting the sparrows chirp is the best philosophy.\" - St. Ivan Bosco"
 }

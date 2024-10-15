@@ -98,5 +98,13 @@
   "support_section_3_option_1": "Одноразова підтримка",
   "support_section_3_option_2": "Щомісячна підтримка",
   "support_section_3_option_3": "Придбати сувенірну продукцію(худі, футболки та шопери, де 30% розподіляються на розвиток ораторії)",
-  "support_section_3_button_text": "Support"
+  "support_section_3_button_text": "Support",
+  "contacts_title": "Контакти",
+  "contacts_sub_text": "Оберіть найкращий спосіб для зв'язку з нами",
+  "contacts_address_field": "Адреса",
+  "contacts_address_value": "вулиця Личаківська, 175, Львів, Львівська область, 79000",
+  "contacts_phone_field": "Телефон",
+  "contacts_form_success_message": "Ваше повідомлення було надіслано. Дякую!",
+  "contacts_form_button_text": "Надіслати повідомлення",
+  "footer_quote": "\"Бути радісним, чинити добро і дозволити горобцям цвірінькати — ось найліпша філософія.\" - св. Іван Боско"
 }
