@@ -494,8 +494,8 @@
       <!-- Activity Section -->
       <section id="activity" class="activity section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Наша діяльність</h2>
-          <p>Дізнайтеся про наші можливості для розвитку і навчання</p>
+          <h2 data-i18n="activity_title"></h2>
+          <p data-i18n="activity_sub_text"></p>
         </div>
         <!-- End Section Title -->
         <div class="container" data-aos="fade-up">
@@ -508,7 +508,7 @@
                 onclick="setDefaultTab('formation-tab-1'); scrollDownClick()"
               >
                 <i class="bi bi-binoculars" style="color: #0dcaf0"></i>
-                <div class="about-link-tab">Формація</div>
+                <div class="about-link-tab" data-i18n="activity_navmenu_1"></div>
               </a>
             </li>
             <!-- End Tab 1 Nav -->
@@ -521,7 +521,7 @@
                 onclick="setDefaultTab('camp-tab-1'); scrollDownClick()"
               >
                 <i class="bi bi-box-seam" style="color: #6610f2"></i>
-                <div class="about-link-tab">Табори</div>
+                <div class="about-link-tab" data-i18n="activity_navmenu_2"></div>
               </a>
             </li>
             <!-- End Tab 2 Nav -->
@@ -534,7 +534,7 @@
                 onclick="setDefaultTab('savio-tab-3'); scrollDownClick()"
               >
                 <i class="bi bi-brightness-high" style="color: #20c997"></i>
-                <div class="about-link-tab">Savio Center</div>
+                <div class="about-link-tab" data-i18n="activity_navmenu_3"></div>
               </a>
             </li>
             <!-- End Tab 3 Nav -->
@@ -547,7 +547,7 @@
                 onclick="scrollDownClick()"
               >
                 <i class="bi bi-command" style="color: #df1529"></i>
-                <div class="about-link-tab">Катехитична школа</div>
+                <div class="about-link-tab" data-i18n="activity_navmenu_4"></div>
               </a>
             </li>
             <!-- End Tab 4 Nav -->
@@ -560,7 +560,7 @@
                 onclick="scrollDownClick()"
               >
                 <i class="bi bi-easel" style="color: #0d6efd"></i>
-                <div class="about-link-tab">Парафія</div>
+                <div class="about-link-tab" data-i18n="activity_navmenu_5"></div>
               </a>
             </li>
             <!-- End Tab 5 Nav -->
@@ -573,7 +573,7 @@
                 onclick="scrollDownClick()"
               >
                 <i class="bi bi-map" style="color: #fd7e14"></i>
-                <div class="about-link-tab">Кампус для студентів</div>
+                <div class="about-link-tab" data-i18n="activity_navmenu_6"></div>
               </a>
             </li>
             <!-- End Tab 6 Nav -->
@@ -606,7 +606,7 @@
                                 style="width: 440px"
                                 class="event-content img-fluid"
                                 src="assets/img/activity/formation/Courses_of_animators_at_the_Church_of_the_Intercession_of_the_Most_Holy_Theotokos_Lviv_Lychakiv_at_the_oratory_named_after_Saint_Dominic_Savio.jpg"
-                                alt="Курси аніматорів у Церква Покрови Пресвятої Богородиці (Львів, Личаків) у ораторія імені святого Домініка Савіо"
+                                alt="Курси аніматорів у Церква Покрови Пресвятої Богородиці (Львів, Личаків) у ораторія імені святого Домініка Савіо | Courses of animators at the Church (Lviv, Lychakiv) at the oratory named after Saint Dominic Savio"
                               />
                             </div>
                           </div>
@@ -632,7 +632,7 @@
                                 style="width: 440px"
                                 class="event-content img-fluid"
                                 src="assets/img/activity/formation/Courses_of_animators_at_the_Church_of_the_Intercession_of_the_Most_Holy_Theotokos_Lviv_Lychakiv_at_the_oratory_named_after_Saint_Dominic_Savio.jpg"
-                                alt="Курси аніматорів у Церква Покрови Пресвятої Богородиці (Львів, Личаків) у ораторія імені святого Домініка Савіо"
+                                alt="Курси аніматорів у Церква Покрови Пресвятої Богородиці (Львів, Личаків) у ораторія імені святого Домініка Савіо | Courses of animators at the Church (Lviv, Lychakiv) at the oratory named after Saint Dominic Savio"
                               />
                             </div>
                           </div>
@@ -645,10 +645,7 @@
                   </div>
 
                   <div class="col-lg-7">
-                    <h3 class="pt-0 pt-lg-5">
-                      Формація: Релігійні Зустрічі Молоді (РЗМ) для духовного
-                      зростання та спільного проведення часу
-                    </h3>
+                    <h3 class="pt-0 pt-lg-5" data-i18n="activity_section_1_title"></h3>
 
                     <!-- Tabs -->
                     <ul class="nav nav-pills mb-3">
@@ -658,7 +655,8 @@
                           data-target="formation-tab-1"
                           data-bs-toggle="pill"
                           href="#about-formation-tab-1"
-                          >Резуми</a
+                          data-i18n="activity_section_1_navmenu_1"
+                          ></a
                         >
                       </li>
                       <li>
@@ -667,7 +665,8 @@
                           data-target="formation-tab-2"
                           data-bs-toggle="pill"
                           href="#about-formation-tab-2"
-                          >Курси Аніматора</a
+                          data-i18n="activity_section_1_navmenu_2"
+                          ></a
                         >
                       </li>
                     </ul>
@@ -678,51 +677,28 @@
                         class="tab-pane fade show active"
                         id="about-formation-tab-1"
                       >
-                        <p class="fst-italic">
-                          "Резуми" — це регулярні релігійні зустрічі молоді, що
-                          проводяться в нашій спільноті для глибшого пізнання
-                          християнства, вивчення життя святих та наслідування
-                          прикладу св. Івана Боско. Ці зустрічі — чудова
-                          можливість не лише духовно зростати, але й створювати
-                          міцні дружні зв'язки через спільні активності та ігри
-                          на командоутворення.
+                        <p class="fst-italic" data-i18n="activity_section_1_navmenu_1_sub_text">
                         </p>
 
                         <div class="d-flex align-items-center mt-4">
                           <i class="bi bi-check2"></i>
-                          <h4>Поглиблене вивчення християнства</h4>
+                          <h4 data-i18n="activity_section_1_navmenu_1_option_1"></h4>
                         </div>
-                        <p>
-                          На резумах ми більше дізнаємося про християнське
-                          вчення, діяльність видатних святих та життя і місію
-                          св. Івана Боско. Ці знання допомагають молоді краще
-                          розуміти основи віри та надихають на їх застосування у
-                          щоденному житті.
+                        <p data-i18n="activity_section_1_navmenu_1_option_1_text">
                         </p>
 
                         <div class="d-flex align-items-center mt-4">
                           <i class="bi bi-check2"></i>
-                          <h4>Командоутворення та ігри</h4>
+                          <h4 data-i18n="activity_section_1_navmenu_1_option_2"></h4>
                         </div>
-                        <p>
-                          Часто під час зустрічей проводяться різні ігри на
-                          командоутворення, спрямовані на зміцнення
-                          взаєморозуміння, довіри та співпраці серед учасників.
-                          Ці активності не лише розважають, але й навчають
-                          працювати разом, підтримувати один одного та будувати
-                          міцну команду.
+                        <p data-i18n="activity_section_1_navmenu_1_option_2_text">
                         </p>
 
                         <div class="d-flex align-items-center mt-4">
                           <i class="bi bi-check2"></i>
-                          <h4>Спільний час у дружній атмосфері</h4>
+                          <h4 data-i18n="activity_section_1_navmenu_1_option_3"></h4>
                         </div>
-                        <p>
-                          "Резуми" — це також можливість просто провести час
-                          разом, поділитися думками, переживаннями та відчути
-                          підтримку спільноти. Це час, коли ми можемо бути
-                          собою, разом з однодумцями розвиватися духовно та
-                          весело проводити час.
+                        <p data-i18n="activity_section_1_navmenu_1_option_3_text">
                         </p>
                       </div>
                       <!-- End Tab 1 Content -->
