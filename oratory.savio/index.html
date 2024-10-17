@@ -99,16 +99,6 @@
         </a>
 
         <nav id="navmenu" class="navmenu">
-          <nav>
-            <ul>
-              <li>
-                <a href="index.html" onclick="changeLanguage('en')">English</a>
-              </li>
-              <li>
-                <a href="index.html" onclick="changeLanguage('ua')">Ukraine</a>
-              </li>
-            </ul>
-          </nav>
           <ul>
             <li>
               <a href="#home" class="active" data-i18n="navmenu_home"></a>
@@ -127,6 +117,13 @@
             </li>
             <!--            <li><a href="#shop">Сувеніри</a></li>-->
             <li><a href="#contact" data-i18n="navmenu_contact"></a></li>
+            <li class="dropdown"><a href="#"><span>Languages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><span  onclick="changeLanguage('ua')">UA</span></li>
+                <li><span  onclick="changeLanguage('en')">EN</span></li>
+                <li><span >IT</span ></li>
+              </ul>
+            </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -3415,6 +3412,25 @@
     <!-- Preloader -->
     <div id="preloader"></div>
 
+    <div id="language_popup" class="overlay">
+      <div class="langswitcher">
+        <button class="button it is-large" >
+    <span class="icon">IT
+    </span>
+        </button>
+        <button class="button ua is-large has-text-white" onclick="changeLanguage('ua')">
+    <span class="icon">UA
+    </span>
+        </button>
+        <button class="button en is-large has-text-white" onclick="changeLanguage('en')">
+    <span class="icon">EN
+    </span>
+        </button>
+
+
+      </div>
+    </div>
+
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -3429,6 +3445,8 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+
+      const popup = document.getElementById('language_popup');
       function scrollDownClick() {
         if (window.screen.width < 750) {
           window.scrollTo({
@@ -3451,8 +3469,6 @@
       function updateContent(langData) {
         document.querySelectorAll("[data-i18n]").forEach((element) => {
           const key = element.getAttribute("data-i18n");
-          console.log(key);
-          console.log(langData);
           element.innerHTML = langData[key];
         });
       }
@@ -3480,7 +3496,7 @@
         const userPreferredLanguage = localStorage.getItem("language") || "en";
         const langData = await fetchLanguageData(userPreferredLanguage);
         updateContent(langData);
-        toggleArabicStylesheet(userPreferredLanguage);
+        !localStorage.getItem("language") && popup.classList.add('show-popup');
       });
     </script>
   </body>

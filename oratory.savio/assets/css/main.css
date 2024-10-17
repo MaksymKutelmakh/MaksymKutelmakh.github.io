@@ -373,20 +373,20 @@ h6 {
     min-width: 200px;
   }
 
-  .navmenu .dropdown ul a {
+  .navmenu .dropdown ul span {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
     color: var(--nav-dropdown-color);
   }
 
-  .navmenu .dropdown ul a i {
+  .navmenu .dropdown ul span i {
     font-size: 12px;
   }
 
-  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul span:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover>span {
     color: var(--nav-dropdown-hover-color);
   }
 
@@ -1981,4 +1981,65 @@ section,
   .google-maps {
     height: 270px !important;
   }
+}
+
+.overlay {
+  z-index: 10000000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.show-popup {
+  visibility: visible !important;
+  overflow: auto;
+
+    opacity: 1;
+
+
+
+}
+
+
+.langswitcher button.button{
+  margin:4px;
+  filter: grayscale(50%);
+  background-size:400%;
+  background-position:center;
+  border-radius:50%;
+  border-color:transparent;
+  transition: all 100ms ease-in-out;
+}
+.langswitcher button.button:hover {
+  background-size:120%;
+  filter: grayscale(10%);
+}
+.langswitcher button.button span {
+  opacity:1;
+  transition: opacity 100ms ease-in-out;
+}
+.langswitcher button.button:hover span {
+  opacity:0
+}
+.langswitcher button.button.it{
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5VCHaisJlyjDcleq7a3Tu-yb-LSUeRTsX6A&s');
+}
+.langswitcher button.button.en{
+  background-image:url('https://i.ibb.co/6JMwR5j/en.png');
+}
+.langswitcher button.button.ua{
+  background-image:url('https://www.countryflags.com/wp-content/uploads/ukraine-flag-png-xl.png');
+}
+.langswitcher{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:90vh;
 }
