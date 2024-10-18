@@ -119,13 +119,35 @@
             <li><a href="#contact" data-i18n="navmenu_contact"></a></li>
             <li class="dropdown">
               <a href="#"
-                ><span>Languages</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
+                ><span
+                  class="lang-button uk-flag-button_header lang-button-header"
+                ></span>
+              </a>
               <ul>
-                <li><span onclick="changeLanguage('ua')">UA</span></li>
-                <li><span onclick="changeLanguage('en')">EN</span></li>
-                <li><span onclick="changeLanguage('it')">IT</span></li>
+                <li>
+                  <button
+                    class="lang-button uk-flag-button_header lang-button-header"
+                    data-lang="uk"
+                    aria-label="Select English"
+                    onclick="changeLanguage('en')"
+                  ></button>
+                </li>
+                <li>
+                  <button
+                    class="lang-button ua-button lang-button-header"
+                    data-lang="ua"
+                    aria-label="Select Ukrainian"
+                    onclick="changeLanguage('ua')"
+                  ></button>
+                </li>
+                <li>
+                  <button
+                    class="lang-button it-button lang-button-header"
+                    data-lang="it"
+                    aria-label="Select Italian"
+                    onclick="changeLanguage('it')"
+                  ></button>
+                </li>
               </ul>
             </li>
           </ul>
@@ -3415,7 +3437,44 @@
 
     <!-- Preloader -->
     <div id="preloader"></div>
-
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h2
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            border-top-left-radius: var(--bs-modal-border-radius);
+            border-top-right-radius: var(--bs-modal-border-radius);
+            padding: 20px;
+            color: #ffffff;
+          "
+        >
+          Select Language
+        </h2>
+        <div class="lang-button-container">
+          <button
+            class="lang-button uk-flag-button"
+            data-lang="uk"
+            aria-label="Select English"
+            onclick="changeLanguage('en')"
+          ></button>
+          <button
+            class="lang-button ua-button"
+            data-lang="ua"
+            aria-label="Select Ukrainian"
+            onclick="changeLanguage('ua')"
+          ></button>
+          <button
+            class="lang-button it-button"
+            data-lang="it"
+            aria-label="Select Italian"
+            onclick="changeLanguage('it')"
+          ></button>
+        </div>
+      </div>
+    </div>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -3472,6 +3531,9 @@
 
         const langData = await fetchLanguageData(lang);
         updateContent(langData);
+        var modal = document.getElementById("myModal");
+
+        modal.style.display = "none";
       }
 
       // Call updateContent() on page load
@@ -3479,12 +3541,16 @@
         const userPreferredLanguage = localStorage.getItem("language") || "en";
         const langData = await fetchLanguageData(userPreferredLanguage);
         updateContent(langData);
-        localStorage.getItem("language") && openFAB();
+        !localStorage.getItem("language") && openFAB();
       });
 
       function openFAB() {
+        var modal = document.getElementById("myModal");
 
+        // Get the close button element
 
+        // Display the modal after page load
+        modal.style.display = "block";
       }
     </script>
   </body>
