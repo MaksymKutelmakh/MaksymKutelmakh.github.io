@@ -3416,26 +3416,6 @@
     <!-- Preloader -->
     <div id="preloader"></div>
 
-    <div id="language_popup" class="overlay">
-      <div class="langswitcher">
-        <button class="button it is-large" onclick="changeLanguage('it')">
-          <span class="icon">IT </span>
-        </button>
-        <button
-          class="button ua is-large has-text-white"
-          onclick="changeLanguage('ua')"
-        >
-          <span class="icon">UA </span>
-        </button>
-        <button
-          class="button en is-large has-text-white"
-          onclick="changeLanguage('en')"
-        >
-          <span class="icon">EN </span>
-        </button>
-      </div>
-    </div>
-
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -3492,7 +3472,6 @@
 
         const langData = await fetchLanguageData(lang);
         updateContent(langData);
-        toggleArabicStylesheet(lang); // Toggle Arabic stylesheet
       }
 
       // Call updateContent() on page load
@@ -3500,8 +3479,13 @@
         const userPreferredLanguage = localStorage.getItem("language") || "en";
         const langData = await fetchLanguageData(userPreferredLanguage);
         updateContent(langData);
-        !localStorage.getItem("language") && popup.classList.add("show-popup");
+        localStorage.getItem("language") && openFAB();
       });
+
+      function openFAB() {
+
+
+      }
     </script>
   </body>
 </html>
