@@ -360,11 +360,11 @@ h6 {
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
+    background-color: rgba(0, 0, 0, 0.8);
     display: block;
     position: absolute;
     visibility: hidden;
-    left: 14px;
+    left: 17px;
     top: 130%;
     opacity: 0;
     transition: 0.3s;
@@ -606,11 +606,11 @@ h6 {
   .navmenu_mobile .dropdown ul {
     margin: 0;
     padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
+    background-color: rgba(0, 0, 0, 0.8);
     display: block;
     position: absolute;
     visibility: hidden;
-    left: 14px;
+    left: 17px;
     top: 130%;
     opacity: 0;
     transition: 0.3s;
