@@ -31,7 +31,7 @@
     <link rel="canonical" href="https://www.oratorysavio.com/" />
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Ораторія ім. св. Домініка Савіо</title>
+    <title data-i18n="home_main_header">Ораторія ім. св. Домініка Савіо</title>
     <meta
       name="description"
       content="Ораторія імені святого Домініка Савіо – це спільнота молоді, яка допомагає духовно розвиватися, виховує нових лідерів та організовує освітні, культурні і волонтерські заходи у стилі св. Івана Боско."
@@ -97,47 +97,47 @@
             alt="Лого ораторії святого Домініка Савіо | Oratory of St. Dominika Savio"
           />
         </a>
-        <div style="    display: flex;
-    align-items: center;
-    justify-content: center;"> <nav id="navmenu_mobile" class="navmenu_mobile">
-          <ul>
-            <li class="dropdown">
-              <a href="#" style=" pointer-events: none;
-  cursor: default;"
-              ><span
+        <div
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <nav id="navmenu_mobile" class="navmenu_mobile">
+            <ul>
+              <li class="dropdown">
+                <a href="#" style="pointer-events: none; cursor: pointer"
+                  ><span
+                    id="selected_lang_mobile"
+                    class="lang-button lang-button-header"
+                  ></span>
+                </a>
+                <ul>
+                  <li>
+                    <button
                       class="lang-button uk-flag-button_header lang-button-header"
-              ></span>
-              </a>
-              <ul>
-                <li>
-                  <button
-                          class="lang-button uk-flag-button_header lang-button-header"
-                          data-lang="uk"
-                          aria-label="Select English"
-                          onclick="changeLanguage('en')"
-                  ></button>
-                </li>
-                <li>
-                  <button
-                          class="lang-button ua-button lang-button-header"
-                          data-lang="ua"
-                          aria-label="Select Ukrainian"
-                          onclick="changeLanguage('ua')"
-                  ></button>
-                </li>
-                <li>
-                  <button
-                          class="lang-button it-button lang-button-header"
-                          data-lang="it"
-                          aria-label="Select Italian"
-                          onclick="changeLanguage('it')"
-                  ></button>
-                </li>
-              </ul>
-            </li>
-          </ul>
-
-        </nav>
+                      data-lang="uk"
+                      aria-label="Select English"
+                      onclick="changeLanguage('en')"
+                    ></button>
+                  </li>
+                  <li>
+                    <button
+                      class="lang-button ua-button lang-button-header"
+                      data-lang="ua"
+                      aria-label="Select Ukrainian"
+                      onclick="changeLanguage('ua')"
+                    ></button>
+                  </li>
+                  <li>
+                    <button
+                      class="lang-button it-button lang-button-header"
+                      data-lang="it"
+                      aria-label="Select Italian"
+                      onclick="changeLanguage('it')"
+                    ></button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
           <nav id="navmenu" class="navmenu">
             <ul>
               <li>
@@ -158,43 +158,43 @@
               <!--            <li><a href="#shop">Сувеніри</a></li>-->
               <li><a href="#contact" data-i18n="navmenu_contact"></a></li>
               <li class="dropdown" id="switcher_desktop">
-                <a href="#" style=" pointer-events: none;
-  cursor: default;"
-                ><span
-                        class="lang-button uk-flag-button_header lang-button-header"
-                ></span>
+                <a href="#" style="pointer-events: none; cursor: pointer"
+                  ><span
+                    id="selected_lang"
+                    class="lang-button lang-button-header"
+                  ></span>
                 </a>
                 <ul>
                   <li>
                     <button
-                            class="lang-button uk-flag-button_header lang-button-header"
-                            data-lang="uk"
-                            aria-label="Select English"
-                            onclick="changeLanguage('en')"
+                      class="lang-button uk-flag-button_header lang-button-header"
+                      data-lang="uk"
+                      aria-label="Select English"
+                      onclick="changeLanguage('en')"
                     ></button>
                   </li>
                   <li>
                     <button
-                            class="lang-button ua-button lang-button-header"
-                            data-lang="ua"
-                            aria-label="Select Ukrainian"
-                            onclick="changeLanguage('ua')"
+                      class="lang-button ua-button lang-button-header"
+                      data-lang="ua"
+                      aria-label="Select Ukrainian"
+                      onclick="changeLanguage('ua')"
                     ></button>
                   </li>
                   <li>
                     <button
-                            class="lang-button it-button lang-button-header"
-                            data-lang="it"
-                            aria-label="Select Italian"
-                            onclick="changeLanguage('it')"
+                      class="lang-button it-button lang-button-header"
+                      data-lang="it"
+                      aria-label="Select Italian"
+                      onclick="changeLanguage('it')"
                     ></button>
                   </li>
                 </ul>
               </li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          </nav></div>
-
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -3582,16 +3582,23 @@
       window.addEventListener("DOMContentLoaded", async () => {
         const userPreferredLanguage = localStorage.getItem("language") || "en";
         const langData = await fetchLanguageData(userPreferredLanguage);
+        const lang_data = {
+          en: "uk-flag-button_header",
+          ua: "ua-button",
+          it: "it-button",
+        };
         updateContent(langData);
         !localStorage.getItem("language") && openFAB();
+        let selected_lang = document.getElementById("selected_lang");
+        let selected_lang_mobile = document.getElementById(
+          "selected_lang_mobile",
+        );
+        selected_lang.classList.add(lang_data[userPreferredLanguage]);
+        selected_lang_mobile.classList.add(lang_data[userPreferredLanguage]);
       });
 
       function openFAB() {
-        var modal = document.getElementById("myModal");
-
-        // Get the close button element
-
-        // Display the modal after page load
+        let modal = document.getElementById("myModal");
         modal.style.display = "block";
       }
     </script>
