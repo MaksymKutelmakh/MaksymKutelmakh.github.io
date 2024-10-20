@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Centered Page</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0e6f6; /* Легкий пурпуровий фон */
+      }
+      .container {
+        text-align: center;
+        background-color: #f3e5f5; /* Світліший пурпуровий для контейнера */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+      }
+      .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #ba68c8; /* Пурпуровий колір для логотипу */
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .buttons {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .button {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #8e24aa; /* Темно-пурпуровий колір для кнопок */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        flex: 1 1 calc(50% - 20px); /* Встановлює ширину кнопок на 50% мінус відступи */
+        max-width: 200px;
+      }
+      .button:hover {
+        background-color: #7b1fa2; /* Темніший відтінок при наведенні */
+      }
+
+      /* Адаптація для маленьких екранів (мобільних пристроїв) */
+      @media (max-width: 600px) {
+        .button {
+          flex: 1 1 100%; /* Кнопки будуть займати всю ширину на маленьких екранах */
+          max-width: none;
+        }
+        .logo {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <!-- Місце для логотипу -->
+        <img
+          src="logo.png"
+          alt="Community Logo"
+          style="width: 80px; height: 80px"
+        />
+      </div>
+      <h1>Welcome to Our Community</h1>
+      <p>Join us and be a part of something special!</p>
+      <div class="buttons">
+        <a href="https://forms.gle/example1" class="button" target="_blank"
+          >Form 1</a
+        >
+        <a href="https://forms.gle/example2" class="button" target="_blank"
+          >Form 2</a
+        >
+        <a href="https://forms.gle/example3" class="button" target="_blank"
+          >Form 3</a
+        >
+        <a href="https://forms.gle/example4" class="button" target="_blank"
+          >Form 4</a
+        >
+        <a href="https://forms.gle/example5" class="button" target="_blank"
+          >Form 5</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
