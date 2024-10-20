@@ -199,6 +199,14 @@
         }
       });
     });
+
+    if(window.screen.width > 1200) {
+      document.getElementById('navmenu_mobile').style.display = 'none';
+      document.getElementById('switcher_desktop').style.display = 'block';
+    } else {
+      document.getElementById('navmenu_mobile').style.display = 'block';
+      document.getElementById('switcher_desktop').style.display = 'none';
+    }
   });
   /**
    * Init swiper sliders
