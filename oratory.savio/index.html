@@ -3344,6 +3344,7 @@
                       class="form-control"
                       placeholder="Ім'я"
                       required=""
+                      id="name"
                     />
                   </div>
 
@@ -3364,6 +3365,7 @@
                       name="subject"
                       placeholder="Тема"
                       required=""
+                      id="subject"
                     />
                   </div>
 
@@ -3374,6 +3376,7 @@
                       rows="6"
                       placeholder="Повідомлення"
                       required=""
+                      id="message"
                     ></textarea>
                   </div>
 
@@ -3587,12 +3590,23 @@
           ua: "ua-button",
           it: "it-button",
         };
+        const form_i18n = {
+          en: { name: "Name", subject: "Subject", message: "Message" },
+          ua: { name: "Ім'я", subject: "Тема", message: "Повідомлення" },
+          it: { name: "Nome", subject: "Soggetto", message: "Messaggio" },
+        };
         updateContent(langData);
         !localStorage.getItem("language") && openFAB();
         let selected_lang = document.getElementById("selected_lang");
         let selected_lang_mobile = document.getElementById(
           "selected_lang_mobile",
         );
+        let name_form = document.getElementById("name");
+        let subject_form = document.getElementById("subject");
+        let message_form = document.getElementById("message");
+        name_form.placeholder = form_i18n[userPreferredLanguage].name;
+        subject_form.placeholder = form_i18n[userPreferredLanguage].subject;
+        message_form.placeholder = form_i18n[userPreferredLanguage].message;
         selected_lang.classList.add(lang_data[userPreferredLanguage]);
         selected_lang_mobile.classList.add(lang_data[userPreferredLanguage]);
       });
