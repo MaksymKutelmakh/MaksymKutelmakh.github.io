@@ -2144,7 +2144,7 @@ section,
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* Adjusted for responsiveness */
+  /*margin: 15% auto; !* Adjusted for responsiveness *!*/
   border: 1px solid #888;
   width: 90%; /* Mobile-friendly width */
   max-width: 500px; /* Maximum width for larger screens */
@@ -2173,6 +2173,19 @@ section,
 }
 
 /* Language Buttons */
+.lang-button-container .lang-button {
+  width: 40px;
+  height: 40px;
+  margin: 10px; /* More space between buttons on smaller screens */
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
 .lang-button {
   width: 20px;
   height: 20px;
@@ -2186,6 +2199,20 @@ section,
   transition: box-shadow 0.3s ease;
 }
 
+/*@media (min-width: 768px) {*/
+/*  .lang-button {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*  }*/
+/*}*/
+
+@media (max-width: 600px) {
+  .lang-button-container .lang-button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .lang-button:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
@@ -2194,8 +2221,30 @@ section,
 
 /* UK Flag (Union Jack) */
 .uk-flag-button_header {
-  background-image: url("../img/square_13481942.png");
-  background-position: center;
+  background: linear-gradient(transparent 40%, #c8102e 40% 60%, transparent 60%),
+    linear-gradient(to right, transparent 45%, #c8102e 45% 55%, transparent 55%),
+    linear-gradient(transparent 35%, #fff 35% 65%, transparent 65%),
+    linear-gradient(
+      to right,
+      transparent 42.25%,
+      #fff 42.25% 57.75%,
+      transparent 42.25%
+    ),
+    linear-gradient(
+      40deg,
+      transparent 47.5%,
+      #c8102e 47.5% 52.5%,
+      transparent 52.5%
+    ),
+    linear-gradient(
+      -40deg,
+      transparent 47.5%,
+      #c8102e 47.5% 52.5%,
+      transparent 52.5%
+    ),
+    linear-gradient(40deg, transparent 46%, #fff 45% 55%, transparent 55%),
+    linear-gradient(-40deg, transparent 46%, #fff 45% 55%, transparent 55%);
+  background-color: #012169;
 }
 
 /* Ukrainian Flag */
@@ -2215,14 +2264,16 @@ section,
 }
 
 /* Responsive design using media queries */
-@media (min-width: 768px) {
+@media (max-width: 400px) {
   .modal-content {
-    width: 50%; /* For tablets and up */
+    width: 80%; /* For tablets and up */
+    height: 180px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 470px) and (max-width: 1024px) {
   .modal-content {
-    width: 33%; /* For larger screens */
+    width: 50%; /* For larger screens */
+    height: 180px;
   }
 }
