@@ -236,7 +236,8 @@
               data-aos-delay="200"
             >
               <img
-                src="assets/img/summary_of_the_year_of_the_oratorio_of_Saint_Dominic_Savio.jpg"
+                id="summary_of_the_year"
+                src="assets/img/summary_of_the_year_of_the_oratorio_of_Saint_Dominic_Savio_en.jpg"
                 class="img-fluid flex-shrink-0"
                 alt="Підсумок року ораторії святого Домініка Савіо | Summary of the year of the oratory of Saint Dominic Savio"
               />
@@ -3608,6 +3609,10 @@
         let name_form = document.getElementById("name");
         let subject_form = document.getElementById("subject");
         let message_form = document.getElementById("message");
+        let summary_of_the_year = document.getElementById(
+          "summary_of_the_year",
+        );
+        summary_of_the_year.src = `assets/img/summary_of_the_year_of_the_oratorio_of_Saint_Dominic_Savio_${userPreferredLanguage}.jpg`;
         name_form.placeholder = form_i18n[userPreferredLanguage].name;
         subject_form.placeholder = form_i18n[userPreferredLanguage].subject;
         message_form.placeholder = form_i18n[userPreferredLanguage].message;
