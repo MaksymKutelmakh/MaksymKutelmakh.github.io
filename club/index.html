@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Клуб Дилетантів</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: url("https://assets-cdn.kahoot.it/player/v2/assets/background-B_Vw5R0X.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+      }
+
+      .radio-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .radio-container label {
+        position: relative;
+        padding-left: 35px;
+        margin-right: 20px;
+        cursor: pointer;
+        font-size: 1.2em;
+        user-select: none;
+      }
+
+      .radio-container input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .radio-container label::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 3px solid #ff8f00;
+        background: transparent;
+        transition: background 0.3s ease;
+      }
+
+      .radio-container input[type="radio"]:checked + label::before {
+        background: #ff8f00;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .input-block,
+      .questions-block,
+      .board,
+      .scoreboard {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        margin-top: 20px;
+        color: #fff;
+      }
+
+      .input-block h2,
+      .questions-block h2,
+      .scoreboard {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .input-block input[type="number"],
+      .questions-block input[type="text"] {
+        padding: 10px;
+        font-size: 1.2em;
+        border-radius: 8px;
+        border: none;
+        width: 70%;
+        margin: 10px 0;
+        text-align: center;
+        outline: none;
+      }
+
+      .input-block button,
+      .questions-block button,
+      .restart-button {
+        background-color: #ff8f00;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease;
+        margin-top: 15px;
+      }
+
+      .input-block button:hover,
+      .questions-block button:hover,
+      .restart-button:hover {
+        background-color: #ff6f00;
+        transform: scale(1.05);
+      }
+
+      .board {
+        display: grid;
+        gap: 15px;
+        max-width: 800px;
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      .card {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        transition:
+          transform 0.3s ease,
+          background-color 0.3s ease;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .card.animate {
+        transform: rotate(5deg) scale(1.1);
+      }
+
+      .card.answered {
+        cursor: default;
+        pointer-events: none;
+        background-color: #bdbdbd;
+        color: #444;
+      }
+
+      .team-score {
+        background-color: #ff6f00;
+        padding: 15px 30px;
+        border-radius: 25px;
+        margin: 10px;
+        display: inline-block;
+        font-weight: bold;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .restart-button {
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-block">
+      <h2>Введіть кількість карток для гри:</h2>
+      <input type="number" id="numCardsInput" min="1" max="100" value="25" />
+      <br /><br />
+      <div class="radio-container">
+        <input
+          type="radio"
+          name="questionType"
+          value="default"
+          id="default"
+          checked
+        />
+        <label for="default">Використати дефолтні питання</label>
+        <input type="radio" name="questionType" value="custom" id="custom" />
+        <label for="custom">Ввести власні питання</label>
+      </div>
+      <button onclick="setNumCards()">Продовжити</button>
+    </div>
+
+    <div class="questions-block hidden" id="questionsBlock">
+      <h2>
+        Введіть питання та відповідь для картки
+        <span id="currentCard">1</span> з <span id="totalCards"></span>
+      </h2>
+      <input type="text" id="questionInput" placeholder="Питання" />
+      <input type="text" id="answerInput" placeholder="Відповідь" />
+      <button onclick="nextQuestion()">Наступне</button>
+    </div>
+
+    <div class="board hidden" id="board"></div>
+
+    <div class="scoreboard hidden">
+      <div class="team-score">Команда 1: <span id="team1-score">0</span></div>
+      <div class="team-score">Команда 2: <span id="team2-score">0</span></div>
+    </div>
+
+    <button class="restart-button hidden" onclick="restartGame()">
+      Перезапустити гру
+    </button>
+
+    <script>
+      let team1Score = 0;
+      let team2Score = 0;
+      let numCards = 0;
+      let questions = [];
+      let answers = [];
+      let currentQuestionIndex = 0;
+
+      function setNumCards() {
+        numCards = parseInt(document.getElementById("numCardsInput").value);
+        if (isNaN(numCards) || numCards <= 0 || numCards > 100) {
+          alert(
+            "Будь ласка, введіть коректну кількість карток (від 1 до 100).",
+          );
+          return;
+        }
+
+        const questionType = document.querySelector(
+          'input[name="questionType"]:checked',
+        ).value;
+
+        if (questionType === "default") {
+          startGameWithDefaults();
+        } else {
+          document.getElementById("questionsBlock").classList.remove("hidden");
+          document.getElementById("totalCards").textContent = numCards;
+          currentQuestionIndex = 0;
+          updateQuestionNumber();
+        }
+
+        document.querySelector(".input-block").classList.add("hidden");
+      }
+
+      function updateQuestionNumber() {
+        document.getElementById("currentCard").textContent =
+          currentQuestionIndex + 1;
+      }
+
+      function nextQuestion() {
+        const question = document.getElementById("questionInput").value.trim();
+        const answer = document.getElementById("answerInput").value.trim();
+
+        if (!question || !answer) {
+          alert("Будь ласка, заповніть і питання, і відповідь.");
+          return;
+        }
+
+        questions.push(question);
+        answers.push(answer);
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < numCards) {
+          updateQuestionNumber();
+          document.getElementById("questionInput").value = "";
+          document.getElementById("answerInput").value = "";
+        } else {
+          startGame();
+        }
+      }
+
+      function startGameWithDefaults() {
+        questions = [
+          "Яка столиця Франції?",
+          "Який океан найбільший у світі?",
+          "Скільки континентів на планеті Земля?",
+          // Відредагуйте для додавання інших запитань
+        ];
+
+        answers = [
+          "Париж",
+          "Тихий океан",
+          "Сім",
+          // Відредагуйте для додавання інших відповідей
+        ];
+
+        document.getElementById("board").classList.remove("hidden");
+        document.querySelector(".scoreboard").classList.remove("hidden");
+        document.querySelector(".restart-button").classList.remove("hidden");
+        createCards();
+      }
+
+      function startGame() {
+        document.getElementById("questionsBlock").classList.add("hidden");
+        document.getElementById("board").classList.remove("hidden");
+        document.querySelector(".scoreboard").classList.remove("hidden");
+        document.querySelector(".restart-button").classList.remove("hidden");
+        createCards();
+      }
+
+      function createCards() {
+        const board = document.getElementById("board");
+        board.innerHTML = "";
+
+        const gridSize = Math.ceil(Math.sqrt(numCards));
+        board.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+
+        for (let i = 0; i < numCards; i++) {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.style.backgroundColor = getRandomColor();
+          card.dataset.state = "initial";
+          card.onclick = () => animateCard(card, i);
+          board.appendChild(card);
+        }
+      }
+
+      function getRandomColor() {
+        const colors = [
+          "#4CAF50",
+          "#FF5733",
+          "#33C1FF",
+          "#FF33A8",
+          "#FFC733",
+          "#8E44AD",
+          "#FF8C00",
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      function animateCard(card, index) {
+        card.classList.add("animate");
+        setTimeout(() => {
+          card.classList.remove("animate");
+          showQuestion(card, index);
+        }, 300);
+      }
+
+      function showQuestion(card, index) {
+        if (card.dataset.state === "question") {
+          card.textContent = answers[index];
+          card.classList.add("answered");
+          card.dataset.state = "answered";
+
+          setTimeout(() => {
+            let isCorrect = confirm("Чи була відповідь правильною?");
+            if (isCorrect) {
+              let team = prompt("Введіть номер команди (1 або 2):");
+              if (team == "1") {
+                team1Score += 10;
+                document.getElementById("team1-score").textContent = team1Score;
+              } else if (team == "2") {
+                team2Score += 10;
+                document.getElementById("team2-score").textContent = team2Score;
+              } else {
+                alert("Невірний номер команди!");
+              }
+            }
+          }, 100);
+
+          card.onclick = null;
+        } else if (!card.dataset.state || card.dataset.state === "initial") {
+          card.textContent = questions[index];
+          card.dataset.state = "question";
+        }
+      }
+
+      function restartGame() {
+        team1Score = 0;
+        team2Score = 0;
+        numCards = 0;
+        questions = [];
+        answers = [];
+
+        document.getElementById("team1-score").textContent = team1Score;
+        document.getElementById("team2-score").textContent = team2Score;
+
+        document.querySelector(".input-block").classList.remove("hidden");
+        document.getElementById("questionsBlock").classList.add("hidden");
+        document.getElementById("board").classList.add("hidden");
+        document.querySelector(".scoreboard").classList.add("hidden");
+        document.querySelector(".restart-button").classList.add("hidden");
+        document.getElementById("board").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
