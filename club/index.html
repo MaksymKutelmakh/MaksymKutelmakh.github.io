@@ -10,11 +10,11 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center bottom;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        max-height: 100%;
         margin: 0;
         padding: 0;
         color: #fff;
@@ -25,6 +25,7 @@
         justify-content: center;
         align-items: center;
         margin: 10px 0;
+        flex-wrap: wrap;
       }
 
       .radio-container label {
@@ -45,8 +46,8 @@
       .radio-container label::before {
         content: "";
         position: absolute;
-        left: 0;
-        top: 0;
+        left: -5px;
+        top: -5px;
         width: 25px;
         height: 25px;
         border-radius: 50%;
@@ -60,7 +61,7 @@
       }
 
       .hidden {
-        display: none;
+        display: none !important;
       }
 
       .input-block,
@@ -74,6 +75,9 @@
         text-align: center;
         margin-top: 20px;
         color: #fff;
+        width: 90%;
+        max-width: 600px;
+        margin: auto;
       }
 
       .input-block h2,
@@ -89,7 +93,8 @@
         font-size: 1.2em;
         border-radius: 8px;
         border: none;
-        width: 70%;
+        width: 80%;
+        max-width: 400px;
         margin: 10px 0;
         text-align: center;
         outline: none;
@@ -127,21 +132,21 @@
       }
 
       .card {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 15px;
         color: white;
-        font-size: 1.5em;
+        font-size: 1.2em;
         cursor: pointer;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
         transition:
           transform 0.3s ease,
           background-color 0.3s ease;
         text-align: center;
-        padding: 15px;
+        padding: 10px;
       }
 
       .card.animate {
@@ -157,7 +162,7 @@
 
       .team-score {
         background-color: #ff6f00;
-        padding: 15px 30px;
+        padding: 10px 20px;
         border-radius: 25px;
         margin: 10px;
         display: inline-block;
@@ -167,6 +172,56 @@
 
       .restart-button {
         margin-top: 25px;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-position: center top;
+        }
+        .input-block,
+        .questions-block,
+        .board,
+        .scoreboard {
+          padding: 15px;
+        }
+
+        .input-block button,
+        .questions-block button,
+        .restart-button {
+          font-size: 1.2em;
+          padding: 10px 20px;
+        }
+
+        .card {
+          width: 80px;
+          height: 80px;
+          font-size: 1em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          background-size: contain;
+          background-position: center top;
+        }
+        .input-block h2,
+        .questions-block h2,
+        .scoreboard {
+          font-size: 1.5em;
+        }
+
+        .input-block button,
+        .questions-block button,
+        .restart-button {
+          font-size: 1em;
+          padding: 8px 16px;
+        }
+
+        .card {
+          width: 60px;
+          height: 60px;
+          font-size: 0.8em;
+        }
       }
     </style>
   </head>
@@ -190,7 +245,11 @@
       <button onclick="setNumCards()">Продовжити</button>
     </div>
 
-    <div class="questions-block hidden" id="questionsBlock">
+    <div
+      class="questions-block hidden"
+      style="display: flex; flex-direction: column; align-items: center"
+      id="questionsBlock"
+    >
       <h2>
         Введіть питання та відповідь для картки
         <span id="currentCard">1</span> з <span id="totalCards"></span>
@@ -206,7 +265,7 @@
       <div class="team-score">Команда 1: <span id="team1-score">0</span></div>
       <div class="team-score">Команда 2: <span id="team2-score">0</span></div>
     </div>
-
+    <div id="timerDisplay" class="timer">30</div>
     <button class="restart-button hidden" onclick="restartGame()">
       Перезапустити гру
     </button>
@@ -367,6 +426,39 @@
           card.dataset.state = "question";
         }
       }
+
+      let timer;
+      let timeRemaining = 30;
+
+      function startTimer() {
+        const timerDisplay = document.getElementById("timerDisplay");
+        timerDisplay.textContent = timeRemaining;
+        timer = setInterval(() => {
+          if (timeRemaining > 0) {
+            timeRemaining--;
+            timerDisplay.textContent = timeRemaining;
+          } else {
+            clearInterval(timer);
+            alert("Час вийшов!");
+          }
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+        console.log("Таймер зупинено на: " + timeRemaining + " секунд");
+        timeRemaining = 30; // Скидання часу для наступного раунду
+      }
+
+      document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("click", () => {
+          if (card.dataset.state === "question") {
+            startTimer();
+          } else if (card.dataset.state === "answered") {
+            stopTimer();
+          }
+        });
+      });
 
       function restartGame() {
         team1Score = 0;
