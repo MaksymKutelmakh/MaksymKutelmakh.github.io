@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кемпінг SAVIO 2026</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        :root{
+            --green:#3F6553;
+            --beige:#D7CAA0;
+            --light:#F7F7F7;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background:var(--light);
+            color:#333;
+            line-height:1.7;
+        }
+
+        .hero{
+            background:linear-gradient(rgb(58 89 71), rgb(58 89 71));
+            color:white;
+            text-align:center;
+            padding:80px 20px;
+        }
+
+        .logo{
+            width:140px;
+            margin-bottom:20px;
+        }
+
+        .hero h1{
+            font-size:3rem;
+            margin-bottom:15px;
+        }
+
+        .subtitle{
+            color:var(--beige);
+            font-size:1.5rem;
+            font-weight:bold;
+        }
+
+        .container{
+            max-width:1100px;
+            margin:auto;
+            padding:50px 20px;
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            margin-bottom:25px;
+            box-shadow:0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .card h2{
+            color:var(--green);
+            margin-bottom:20px;
+        }
+
+        .card ul{
+            padding-left:20px;
+        }
+
+        .card li{
+            margin-bottom:10px;
+        }
+
+        .info-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:20px;
+        }
+
+        .register-section{
+            background:var(--green);
+            color:white;
+            text-align:center;
+            padding:60px 30px;
+            border-radius:25px;
+            margin-top:30px;
+        }
+
+        .register-section h2{
+            margin-bottom:15px;
+        }
+
+        .register-btn{
+            display:inline-block;
+            margin-top:25px;
+            background:var(--beige);
+            color:var(--green);
+            text-decoration:none;
+            padding:18px 35px;
+            border-radius:15px;
+            font-size:1.2rem;
+            font-weight:bold;
+            transition:.3s;
+        }
+
+        .register-btn:hover{
+            transform:translateY(-4px);
+        }
+
+        .contact{
+            font-size:1.1rem;
+            margin-top:10px;
+        }
+
+        footer{
+            text-align:center;
+            padding:40px 20px;
+            color:#777;
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="hero">
+
+    <!-- заміни на свій логотип -->
+    <img src="images/logo.png" alt="SAVIO" class="logo">
+
+    <h1>🏕️ КЕМПІНГ SAVIO 2026</h1>
+
+    <p class="subtitle">
+        Хочеш літо, яке запам'ятається?<br>
+        Тоді тобі точно з нами!
+    </p>
+
+</section>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>🌲 На тебе чекає справжня пригода</h2>
+
+        <ul>
+            <li>✨ Тематичні ігри та квести</li>
+            <li>🏞️ Похід до водоспаду</li>
+            <li>🌊 Купання в річці</li>
+            <li>🎨 Майстер-класи</li>
+            <li>⛺ Ночівлі в наметах (намети вже входять у вартість)</li>
+            <li>🔥 Вечори біля ватри з атмосферою, яку не передати словами</li>
+            <li>🤍 Нові знайомства, сміх і спогади на все життя</li>
+        </ul>
+
+    </div>
+
+    <div class="info-grid">
+
+        <div class="card">
+            <h2>📅 Основна інформація</h2>
+
+            <p><strong>Дата:</strong> 27 липня – 1 серпня 2026</p>
+            <p><strong>Вік:</strong> 14–17 років</p>
+            <p><strong>Благодійний внесок:</strong> 6000 грн</p>
+        </div>
+
+        <div class="card">
+            <h2>🎒 Що взяти з собою?</h2>
+
+            <ul>
+                <li>✔️ Каремат</li>
+                <li>✔️ Спальник</li>
+                <li>✔️ Посуд</li>
+                <li>✔️ Хороший настрій</li>
+                <li>✔️ І обов'язково друга 😉</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📞 Контакти</h2>
+
+        <p class="contact">
+            +38 (097) 990-38-71 — Ораторія св. Домініка Савіо
+        </p>
+
+        <p class="contact">
+            +38 (067) 853-34-64 — о. Тарас Милян
+        </p>
+
+        <br>
+
+        <p>
+            Табір відбувається під опікою отців салезіян.
+        </p>
+
+    </div>
+
+    <div class="register-section">
+
+        <h2>🚀 Готовий до пригод?</h2>
+
+        <p>
+            Не сиди вдома — аніматори SAVIO зроблять це літо неймовірним!
+        </p>
+
+        <a
+            href="https://forms.gle/76HVYzx1uoeyQbMYA"
+            target="_blank"
+            class="register-btn"
+        >
+            📝 Зареєструватися на кемпінг
+        </a>
+
+    </div>
+
+</div>
+
+<footer>
+    SAVIO ORATORY © 2026
+</footer>
+
+</body>
+</html>

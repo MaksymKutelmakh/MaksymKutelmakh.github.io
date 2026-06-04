@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVIO ORATORY CAMP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="images/logo.png" alt="Savio Logo" class="logo">
+
+    <h1>Літній табір SAVIO</h1>
+
+    <p>
+        Незабутні пригоди, нові друзі,
+        ігри, спорт та багато радості.
+    </p>
+
+    <div class="age-buttons">
+        <button onclick="showTeams('kids')">
+            5-9 років
+        </button>
+
+        <button onclick="showTeams('camping')">
+            11-13 років
+        </button>
+    </div>
+</header>
+
+<section class="info">
+    <h2>Про табір</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🎨 Майстер-класи</h3>
+            <p>Творчість та розвиток талантів.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚽ Спорт</h3>
+            <p>Командні ігри та активності.</p>
+        </div>
+
+        <div class="card">
+            <h3>🙏 Духовна програма</h3>
+            <p>Молитва та християнські цінності.</p>
+        </div>
+
+        <div class="card">
+            <h3>🤝 Нові друзі</h3>
+            <p>Справжня ориторійна атмосфера.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="teams-section" style="display:none;">
+    <h2 id="teams-title">Оберіть команду</h2>
+    <div id="teams-container"></div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+<script>
+    const teams = [
+  {
+    number: 1,
+    captain: "Анна Захарець",
+    colorName: "Зелена",
+    color: "#4CAF50",
+    form: "https://forms.gle/RgfCeM8ViU7yRW2Z7",
+    isFull: true
+  },
+  {
+    number: 2,
+    captain: "Дарина Нагірна",
+    colorName: "Червона",
+    color: "#E53935",
+    form: "https://forms.gle/7vaH2AnRoLGsJSHP7"
+  },
+  {
+    number: 3,
+    captain: "Анастасія Сипало",
+    colorName: "Рожева",
+    color: "#EC407A",
+    form: "https://forms.gle/3bJR85o5T1LW4BG58"
+  },
+  {
+    number: 4,
+    captain: "Наталя Гуменна",
+    colorName: "Жовта",
+    color: "#FDD835",
+    form: "https://forms.gle/NFodNwSn6frJfWzM6"
+  },
+  {
+    number: 5,
+    captain: "Юлія Калина",
+    colorName: "Фіолетова",
+    color: "#8E24AA",
+    form: "https://forms.gle/T2cPRKKdwrranX7P7"
+  },
+  {
+    number: 6,
+    captain: "Марія Котис",
+    colorName: "Темно-синя",
+    color: "#1E3A8A",
+    form: "https://forms.gle/1TupM4smqfwbFFHs7"
+  },
+  {
+    number: 7,
+    captain: "Юстина Кравчук",
+    colorName: "Голуба",
+    color: "#29B6F6",
+    form: "https://forms.gle/FtNncvU2xVDyaekn7"
+  },
+  {
+    number: 8,
+    captain: "Христина Мельничук",
+    colorName: "Салатова",
+    color: "#8BC34A",
+    form: "https://forms.gle/dyEXQTRVXEyBtwNG6"
+  },
+  {
+    number: 9,
+    captain: "Анна Голод",
+    colorName: "Фіолетова",
+    color: "#7B1FA2",
+    form: "https://forms.gle/fUjBB8Jik4yPmJ3J8"
+  },
+  {
+    number: 10,
+    captain: "Дарина Тенета",
+    colorName: "Оранжева",
+    color: "#FB8C00",
+    form: "https://forms.gle/UeWv4EnNs5P2qaf67"
+  }
+];
+
+const campingTeams = [
+  {
+    number: 1,
+    captain: "Тенета Дарина",
+    colorName: "Зелений",
+    color: "#4CAF50",
+    form: "https://forms.gle/VP6yeRiHatzMuriU7"
+  },
+  {
+    number: 2,
+    captain: "Мельничук Христина",
+    colorName: "Синій",
+    color: "#1565C0",
+    form: "https://forms.gle/pPsY557tv2SpZjF18"
+  },
+  {
+    number: 3,
+    captain: "Хімка Марта",
+    colorName: "Рожевий",
+    color: "#EC407A",
+    form: "https://forms.gle/V3py4opqXJAdCqjX6"
+  },
+  {
+    number: 4,
+    captain: "Кравчук Юстина",
+    colorName: "Салатовий",
+    color: "#8BC34A",
+    form: "",
+    isFull: true
+  },
+  {
+    number: 5,
+    captain: "Пилипчук Вікторія",
+    colorName: "Фіолетовий",
+    color: "#8E24AA",
+    form: "https://forms.gle/4i5TnER5wFTe7zHi9"
+  },
+  {
+    number: 6,
+    captain: "Пилип Андріана",
+    colorName: "Голубий",
+    color: "#29B6F6",
+    form: "https://forms.gle/dJmWDRENuEkhvQNR8"
+  },
+  {
+    number: 7,
+    captain: "Шелюх Павло",
+    colorName: "Оранжевий",
+    color: "#FB8C00",
+    form: "https://forms.gle/Nj7hDqK9zAmx8mCeA"
+  },
+  {
+    number: 8,
+    captain: "Лоза Софія",
+    colorName: "Червоний",
+    color: "#E53935",
+    form: "https://forms.gle/nXF2HJ131sbanApZ6"
+  },
+  {
+    number: 9,
+    captain: "Солянко Кароліна",
+    colorName: "Блакитний",
+    color: "#4FC3F7",
+    form: "https://forms.gle/zxLtfCGa7ew9CaLi6"
+  },
+  {
+    number: 10,
+    captain: "Кригер Маркіян",
+    colorName: "Жовтий",
+    color: "#FDD835",
+    form: "https://forms.gle/EokoWhwYLqEsLjhb9"
+  }
+];
+
+function showTeams(group) {
+   const teamsSection =
+    document.getElementById("teams-section");
+
+  teamsSection.style.display = "block";
+  const container = document.getElementById("teams-container");
+
+  container.innerHTML = "";
+
+  const selectedTeams =
+    group === "camping"
+      ? campingTeams
+      : teams;
+
+  selectedTeams.forEach(team => {
+    container.innerHTML += `
+      <div class="team-card">
+
+        <div
+          class="team-header"
+          style="background:${team.color}">
+        </div>
+
+        <div class="team-content">
+
+          <h3>Команда №${team.number}</h3>
+
+          <p><strong>Капітан:</strong> ${team.captain}</p>
+
+          <p>
+            <strong>Колір:</strong>
+            <span style="
+              display:inline-block;
+              width:14px;
+              height:14px;
+              border-radius:50%;
+              background:${team.color};
+              margin:0 6px;
+              vertical-align:middle;
+            "></span>
+            ${team.colorName}
+          </p>
+
+          ${
+            team.isFull
+              ? '<span class="full-team">Місць немає</span>'
+              : `<a href="${team.form}" target="_blank">Записатися</a>`
+          }
+
+        </div>
+
+      </div>
+    `;
+  });
+
+  document
+    .getElementById("teams-section")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+}
+</script>
+</html>
