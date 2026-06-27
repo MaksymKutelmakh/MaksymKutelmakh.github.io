@@ -19,36 +19,13 @@
         ігри, спорт та багато радості.
     </p>
 
-    <div class="age-buttons">
-        <button onclick="showTeams('kids')">
-            5-9 років
-        </button>
-
-        <button onclick="showTeams('camping')">
-            11-14 років
-        </button>
-    </div>
+ 
 </header>
 
 <section class="camp-info-section">
     <h2>📅 Інформація про табори</h2>
 
     <div class="camp-info-cards">
-
-        <div class="info-card">
-            <h3>👧 Табір 5–9 років</h3>
-
-            <p><strong>Дати:</strong><br>
-            29 червня – 3 липня 2026 року</p>
-
-            <p><strong>Контактна особа:</strong><br>
-            Аніматор Настя</p>
-
-            <p><strong>Телефон:</strong><br>
-            <a href="tel:+380988394670">
-                +380 98 839 46 70
-            </a></p>
-        </div>
 
         <div class="info-card">
             <h3>🧑 Табір 11–14 років</h3>
@@ -106,7 +83,7 @@
     </div>
 </section>
 
-<section id="teams-section" style="display:none;">
+<section id="teams-section" >
     <h2 id="teams-title">Оберіть команду</h2>
     <div id="teams-container"></div>
 </section>
@@ -262,67 +239,54 @@ const campingTeams = [
     form: "https://forms.gle/EokoWhwYLqEsLjhb9"
   }
 ];
+function showTeams() {
+    const container = document.getElementById("teams-container");
 
-function showTeams(group) {
-   const teamsSection =
-    document.getElementById("teams-section");
+    container.innerHTML = "";
 
-  teamsSection.style.display = "block";
-  const container = document.getElementById("teams-container");
+    campingTeams.forEach(team => {
+        container.innerHTML += `
+            <div class="team-card">
 
-  container.innerHTML = "";
+                <div
+                    class="team-header"
+                    style="background:${team.color}">
+                </div>
 
-  const selectedTeams =
-    group === "camping"
-      ? campingTeams
-      : teams;
+                <div class="team-content">
 
-  selectedTeams.forEach(team => {
-    container.innerHTML += `
-      <div class="team-card">
+                    <h3>Команда №${team.number}</h3>
 
-        <div
-          class="team-header"
-          style="background:${team.color}">
-        </div>
+                    <p><strong>Капітан:</strong> ${team.captain}</p>
 
-        <div class="team-content">
+                    <p>
+                        <strong>Колір:</strong>
+                        <span style="
+                            display:inline-block;
+                            width:14px;
+                            height:14px;
+                            border-radius:50%;
+                            background:${team.color};
+                            margin:0 6px;
+                            vertical-align:middle;
+                        "></span>
+                        ${team.colorName}
+                    </p>
 
-          <h3>Команда №${team.number}</h3>
+                    ${
+                        team.isFull
+                            ? '<span class="full-team">Місць немає</span>'
+                            : `<a href="${team.form}" target="_blank">Записатися</a>`
+                    }
 
-          <p><strong>Капітан:</strong> ${team.captain}</p>
+                </div>
 
-          <p>
-            <strong>Колір:</strong>
-            <span style="
-              display:inline-block;
-              width:14px;
-              height:14px;
-              border-radius:50%;
-              background:${team.color};
-              margin:0 6px;
-              vertical-align:middle;
-            "></span>
-            ${team.colorName}
-          </p>
-
-          ${
-            team.isFull
-              ? '<span class="full-team">Місць немає</span>'
-              : `<a href="${team.form}" target="_blank">Записатися</a>`
-          }
-
-        </div>
-
-      </div>
-    `;
-  });
-
-  document
-    .getElementById("teams-section")
-    .scrollIntoView({
-      behavior: "smooth"
+            </div>
+        `;
     });
 }
+window.addEventListener("DOMContentLoaded", () => {
+    showTeams();
+});
 </script>
 </html>
